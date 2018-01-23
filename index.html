@@ -1,5 +1,5 @@
 <html>
-    <head> <title> Siteul meu </title> </head>
+    <head> <title> Site-ul meu </title> </head>
         <body>
 
            <h1>Heading 1</h1>
@@ -12,7 +12,112 @@
            <br />
            <br />
 
-           <a href ="http://www.w3schools.com" class="test" id="test" style=""> Text pe care se da click </a>
+           <ul>
+               <li>  <a href="www.w3schools.com">Text 1</a> </li>
+               <li> Text 2 </li>
+               <li> Text 3</li>
+           </ul>
+           <ol>
+                <li> Text 4</li>
+                <li> Text 5</li>
+                <li> Text 6</li>
+           </ol>
+
+           <table border="1"style="width:100 px; height: 100 px;">
+               <tr>
+                   <td colspan ="2" > Text 1</td>
+               </tr>
+               <tr>
+                   <td> Text 2</td>
+                   <td>Text 3</td>
+               </tr>
+           </table>
+
+           <br/>
+           <br/>
+           <br/>
+
+           <table border="1"style="width:100 px; height: 100 px;">
+                <tr>
+                    <td rowspan ="2" > Text 1</td>
+                    <td> Text 2</td>
+                </tr>
+                <tr>
+                    <td>Text 3</td>
+                </tr>
+            </table>
+
+
+           <a href ="http://www.w3schools.com" class="test" id="test" style=""> Text pe care se da click
+            <img src="https://www.europafm.ro/wp-content/uploads/2015/04/pisica-mica-jucausa.jpg"/> </a>
+
+        
+
+            <table border="1" cellspacing ="0" style="width:100 px; height: 100 px;">
+                <tr>
+                    <td rowspan ="2"> TEXT 1</td>
+                    <td>Text 2</td>
+                    <td>Text 3</td>
+                    <td> Text 4</td>
+                </tr>
+
+                <tr>
+                    <td> Text 2</td>
+                    <td colspan="2"></td>
+                    
+                </tr>
+
+                <tr>
+                        <td colspan="2"> Text 1</td>
+                        <td> Text 3</td>
+                        <td> Text 4</td>
+                </tr>
+
+                <tr> <td colspan="4">Text 1</td>
+                    
+                </tr>
+
+            </table>
+
+            <br/>
+            <br/>
+            <br/>
+
+<form>
+    <label for ="nume">Nume</label> 
+    <input type="text" id="nume" placeholder="e.g. John"/> <br/>
+
+    <label for ="prenume">Prenume</label> 
+    <input type="text" id="prenume" placeholder="e.g. Mitchell"/> <br/>
+
+    <label for ="sex">Sex</label> 
+    <select id="sex">
+        <option></option>
+        <option>Masculin</option>
+        <option>Feminin</option>
+        <option>Other</option>
+    </select>
+
+    <br/>
+    <label for="comentarii">Comentarii</label>
+    <textarea id="comentarii"></textarea>
+
+<br/>
+<label for="tc">Terms and conditions</label>
+<input type="checkbox" id="tc"/>
+<br/>
+
+<p>Favorite color:</p>
+<label for="red">Red</label>
+<input type="radio" id="red" name="favcolor"/>
+
+<label for="yellow">Yellow</label>
+<input type="radio" id="yellow" name="favcolor"/>
+
+<label for="blue">Blue</label>
+<input type="radio" id="blue" name="favcolor"/>
+
+</form>
         </body>
    
 </html>
