@@ -15,7 +15,7 @@
 
         <tr> <!-- Al doilea rand: nu facem nimic special; scriem datele -->
             <td>Foarte puțin</td>
-            <td align ="center">1</td>
+            <td align ="center">1</td> <!-- Aliniem 1 centrat ca sa ajunga exact deasupra butonului radio -->
             <td align ="center">2</td>
             <td align ="center">3</td>
             <td align ="center">4</td>
@@ -25,7 +25,8 @@
 
         <tr> <!--Al treilea rand: pun colspan gol ca sa mi se aseze bulinele cum trebuie -->
             <td colspan=""></td> 
-            <td><input type="radio" name="like"/></td>
+            <td><input type="radio" name="like"/></td> <!-- Punem acelasi nume la butoane ca sa putem apasa
+                cate unul o data, altfel s-ar selecta doua sau mai multe o data -->
             <td><input type="radio" name="like"/></td>
             <td><input type="radio" name="like"/></td>
             <td><input type="radio" name="like"/></td>
@@ -60,7 +61,7 @@
         </tr>
 
         <tr> <!-- Al optulea rand: unim toate celulele -->
-            <td colspan = "7"><textarea></textarea> </td>
+            <td colspan = "7"><textarea></textarea> </td> <!-- Textarea este input type-ul pt commenturi!-->
         </tr>
        
     </table>
