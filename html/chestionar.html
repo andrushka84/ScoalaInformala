@@ -2,38 +2,71 @@
 <html>
 <head>
 
-    <title>Chestionar</title>
+    <title>Chestionar</title> <!-- Asta se vede in browser in partea de sus (peste bara de adrese)-->
    
 <body>
-    <table>
-        <tr>
-            <td colspan="7"> Va place cursul?</td>
+
+    <h1> Chestionar</h1> <!-- titlul -->
+    <table> <!-- construim un tabel cu 8 randuri si 7 coloane fara border (adica fara linie) -->
+
+        <tr> <!-- Primul rand: unim toate celulele -->
+            <td colspan="7"> <em>Vă place cursul?</em> </td> 
         </tr>
-        <tr>
-            <td>Foarte putin</td>
+
+        <tr> <!-- Al doilea rand: nu facem nimic special; scriem datele -->
+            <td>Foarte puțin</td>
             <td align ="center">1</td>
             <td align ="center">2</td>
             <td align ="center">3</td>
             <td align ="center">4</td>
             <td align ="center">5</td>
-            <td align ="center">Foarte mult</td>
+            <td>Foarte mult</td>
         </tr>
-        <tr>
-            <td colspan=""></td>
+
+        <tr> <!--Al treilea rand: pun colspan gol ca sa mi se aseze bulinele cum trebuie -->
+            <td colspan=""></td> 
             <td><input type="radio" name="like"/></td>
             <td><input type="radio" name="like"/></td>
             <td><input type="radio" name="like"/></td>
             <td><input type="radio" name="like"/></td>
             <td><input type="radio" name="like"/></td>  
         </tr> 
-            
-        <tr>
-            <td colspan="7"> Cum pot imbunatati cursul?</td>
+
+        <tr> <!-- Al patrulea rand: unim toate celulele -->
+            <td colspan="7"> <em>Vă plac colegii?</em> </td> 
         </tr>
-        <tr>
+
+        <tr> <!-- Al cincilea rand: nu facem nimic special; scriem datele -->
+            <td align ="center">1</td>
+            <td>Foarte puțin</td> 
+            <td align ="center">2</td>
+            <td align ="center">3</td>
+            <td align ="center">4</td>
+            <td align ="center">5</td>
+            <td>Foarte mult</td>
+        </tr>
+
+         <tr> <!--Al saselea rand: pun colspan gol ca sa mi se aseze bulinele cum trebuie -->
+            <td colspan=""></td> 
+            <td><input type="radio" name="like"/></td>
+            <td><input type="radio" name="like"/></td>
+            <td><input type="radio" name="like"/></td>
+            <td><input type="radio" name="like"/></td>
+            <td><input type="radio" name="like"/></td>  
+        </tr> 
+                    
+        <tr> <!-- Al saptelea rand: unim toate celulele -->
+            <td colspan="7"> <em>Cum pot îmbunătăți cursul?</em> </td> 
+        </tr>
+
+        <tr> <!-- Al optulea rand: unim toate celulele -->
             <td colspan = "7"><textarea></textarea> </td>
         </tr>
        
     </table>
+
+    <input type="button" value="Trimite"/> <!-- Punem butonul "Trimite" -->
+
 </body>
+
 </html>
