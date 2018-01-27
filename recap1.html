@@ -1,0 +1,165 @@
+<!-- Recapitulare HTML Lectia 1 -->
+    
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recapitulare notiuni</title>
+</head>
+
+<body>
+    <h1>Titlu mare</h1> <!-- Heading 1 -->
+
+    <p>Un paragraf de text.</p> <!-- paragraf -->
+
+    <ul> <!-- lista neordonata (unordered list) = bullet points -->
+        <li>caine</li>
+        <li>pisica</li>
+        <li>lup</li>
+    </ul>
+
+    <ol> <!-- lista ordonata (ordered list) = lista numerotata (1,2,3,4)-->
+        <li>caine</li>
+        <li>pisica</li>
+        <li>lup</li>
+    </ol>
+
+    <br/> <!-- un rand liber (break) = ca si cum as apasa Enter = inline element -->
+
+    <table> <!-- desenam un tabel (fara linii desenate)-->
+        <tr> <!-- tr = table row -->
+                <td>1</td> <!-- td = table data -->
+                <td>2</td>
+        </tr>
+         <tr>
+                <td>3</td>
+                <td>4</td>
+         </tr>
+        
+    </table>
+    <br/>
+    <br/>
+    <br/>
+<!-- adaugam un tabel (cu linii desenate) -->
+    <table border="1" cellspacing ="0" style="width:100 px; height: 100 px;"> 
+<!-- border = daca are sau nu linie (dubla); cellspacing = 0 pt ca linia dubla sa fie simpla, 
+        adica spatiul dintre cele 2 linii sa fie zero -->
+        <tr>
+                <th>Number</th> <!-- th = table header -->
+                <th> Code</th>
+        </tr>
+           
+        <tr> <!-- tr = table row -->
+                <td>5</td> <!-- td = table data -->
+                <td>6</td>
+        </tr>
+         <tr>
+                <td>7</td>
+                <td>8</td>
+         </tr>
+        
+    </table>
+    <br/>
+    <br/>
+    <br/>
+    <table border="1" cellspacing = "0" style="width:100 px; height: 100 px;"> <!-- desenam un tabel 
+cu linii desenate si merge cells. rowspan = merge cells pe verticala; colspan = merge cells pe orizontala-->
+        <tr> <!-- tr = table row -->
+            <th> Q1 </th>
+            <th> Q2 </th>
+            <th> Q3 </th>   
+        </tr>
+
+        <tr>
+                <td colspan="2">1</td>
+                <td>2</td>
+        </tr>
+        
+         <tr>
+                <td rowspan="2">3</td>
+                <td>4</td>
+                <td>5</td>
+         </tr>
+         <tr>
+               
+                <td>7</td>
+                <td>8</td>
+         </tr>
+        
+    </table>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <table border="1" cellspacing = "0" style="width:100 px; height: 100 px;"> 
+<!-- Tabelul din clasa ala mare cu 5 linii (4 + header) si 4 coloane la inceput si 
+    apoi cu rowspan si colspan  -->
+        <tr>
+            <th> A1</th>
+            <th> A2</th>
+            <th> A3</th>
+            <th> A4</th>
+        </tr>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+           
+            <td>6</td>
+            <td colspan="2">7</td>
+           
+        
+        </tr>
+            
+        <tr>
+            <td colspan="4">9</td>
+            
+        </tr>
+     </table>
+
+     <br/>   
+     <br/>   
+     <br/>  
+
+<!-- punem un link la text -->   
+     <a href="https://www.w3schools.com/" >Click this link </a> 
+
+     <br/>   
+     <br/>   
+     <br/>  
+<!-- inseram o imagine -->
+     <img src="http://storage0.dms.mpinteractiv.ro/media/401/321/5108/15365821/1/caine.jpg?height=348&width=600"/>
+     
+     <br/>   
+     <br/>   
+     <br/>  
+<!-- transformam o imagine in link-->
+    <a href = "https://www.w3schools.com/"  > 
+        <img src="http://storage0.dms.mpinteractiv.ro/media/401/321/5108/15365821/1/caine.jpg?height=348&width=600" alt = "Catre W3 schools"/>
+    </a>
+    
+    <br/>   
+    <br/>   
+    <br/> 
+<!-- cream un formular -->
+    <form>
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" placeholder="e.g. John"/> 
+        <br/>
+
+        <label for="prenume">Prenume:</label>
+        <input type="text" id="prenume" placeholder="e.g. Kerry"/>
+
+        <label for="sex">Gender</label>
+        <select id="sex">
+            <option>Male</option> 
+            <option>Female</option>
+            <option>Undisclosed</option>
+        </select>
+        
+    </form>
+</body>
+</html>
