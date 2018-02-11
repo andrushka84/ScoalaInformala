@@ -1,0 +1,48 @@
+
+.container{
+     border-radius:50px;
+     
+     overflow: hidden;
+                
+            }
+.header{
+    background-color: blue;
+    color: white;
+    height: 100px;
+}
+
+.web{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.titlu{
+    text-align: center;
+}
+
+.main{
+    background-color: white;
+    display:inline-block;
+    vertical-align: top;
+    text-align: right;
+    width: 80%;
+}
+
+.aside {
+    background-color: white;
+    display: inline-block;
+    overflow: hidden;
+    width:20%;
+}
+
+.aside a{
+    display: inline-block;
+    
+}
+
+.footer{
+    background-color:green;
+    text-align: center;
+}
+

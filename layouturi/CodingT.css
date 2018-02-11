@@ -1,0 +1,24 @@
+/* https://www.youtube.com/watch?time_continue=103&v=7kVeCqQCxlk , minute 7*/
+.container{
+    display: grid;
+    grid-template-columns:100px 100px;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+    grid-template-areas: "main-content  sidebar"
+                         "other  sidebar";
+}
+
+.main-content{
+    grid-area:main-content;
+    background-color: aqua;   
+}
+
+.other-content{
+    grid-area:other;
+    background-color: blue;    
+}
+
+.sidebar{
+    grid-area:sidebar;
+    background-color: green;   
+}

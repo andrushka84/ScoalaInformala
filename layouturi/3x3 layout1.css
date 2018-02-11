@@ -1,0 +1,33 @@
+
+
+/* Layout replicated from http://boylesoftware.com/blog/css-layout-tools/ */
+
+.container{
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-areas:"top    top right" 
+                        "middle middle  right"
+                        "bottom bottom  bottom"
+}
+.dreptunghi1{
+    grid-area: top;
+    background-color: green; 
+}
+
+.dreptunghi2{
+    grid-area: middle;
+    background-color: yellow;
+}
+
+.dreptunghi3{
+    grid-area: bottom;
+    background-color: red;
+   
+}
+
+.dreptunghi4{
+    grid-area: right;
+    background-color:blue;
+    
+}

@@ -1,0 +1,46 @@
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100vh;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}  
+
+h1{
+    text-align:center;
+    font-weight:bold;
+}
+
+.search{
+    grid-row: 1;
+    grid-column: 1/2;
+    background-color: rgb(9, 172, 118);
+}
+
+.tweets{
+    
+    grid-row: 1;
+    grid-column: 2/3;
+    background-color: rgb(146, 146, 240);
+}
+
+.messages{
+    
+    grid-row: 1;
+    grid-column: 3/4;
+    background-color: rgb(207, 171, 240);
+}
+
+.replies{
+    
+    grid-row: 1;
+    grid-column: 4/5;
+    background-color: forestgreen;
+}
+
+
+
+
+
+
