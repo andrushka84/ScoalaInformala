@@ -1,0 +1,46 @@
+.container{ 
+    background-image: url("https://blog.conservation.org/wp-content/uploads/2014/06/ci_19290600_cropped.jpg"); 
+    /* padding: 20px  50px; */
+    width: 500px;
+}
+
+form{
+    background-color: rgba(0, 191, 255, 0.5);
+    width: 400px;
+    padding: 50px;
+}
+
+.title{
+    background-color: rgba(75, 0, 130, 0.5);
+}
+
+h1{
+    margin-bottom: 0px;
+}
+
+.email{
+    background-color: rgba(0, 191, 255, 0.5);
+}
+
+label{
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+button{
+    background-color: rgba(75, 0, 130, 0.5);
+    color: white;
+    font-size: 15pt;
+    letter-spacing: 3px;
+}
+
+.info{
+    font-size: 8pt;
+    margin-top: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: greenyellow;
+}
+

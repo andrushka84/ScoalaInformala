@@ -1,0 +1,53 @@
+.container{
+    display: grid;
+    margin-left: 100px;
+    margin-right: 100px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 300px, 1fr, 100px ; 
+    grid-template-areas: "header    header"
+                         "aside main"
+                         "footer    footer";
+}
+
+.header{
+    grid-area:"header";
+    grid-row:1/2;
+    grid-column:1/span 3;
+    background-color: aquamarine;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 30pt;
+    text-align: center;
+    color: indigo;
+}
+
+.aside{
+    grid-area: "aside";
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: rgb(186, 157, 212);
+    padding: 50px;
+    text-align: left;
+}
+
+.main{
+    grid-area: "main";
+    background-color: aqua;
+    grid-row:2/3 ;
+    grid-column: 2/4;
+    padding: 50px;
+    text-align: justify;
+    
+}
+
+.footer{
+    grid-area: "footer";
+    background-color: green;
+    grid-row: 3/4;
+    grid-column: 1/4;
+    text-align: center;
+}
+
+h1,h2,h3{
+   color: blueviolet; 
+}

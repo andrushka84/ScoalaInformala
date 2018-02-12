@@ -1,0 +1,23 @@
+.container{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+    grid-template-areas: "sidebar main"
+                         "other main"  
+}
+
+.main{
+    background-color: aquamarine;
+    grid-area: main;
+}
+
+.other{
+    background-color: aqua;
+    grid-area: other;
+}
+
+.sidebar{
+    background-color: blueviolet;
+    grid-area: sidebar;
+}
