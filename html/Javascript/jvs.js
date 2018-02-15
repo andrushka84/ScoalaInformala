@@ -71,10 +71,106 @@ function gradF(a) {
 console.log(gradF(50));
 
 
-// Pentru minimul a 2 nr folosim functia(metoda) Math.min(a,b,c)
+// Pentru minimul a 3 nr folosim functia(metoda) Math.min(a,b,c)
 function min(a,b,c) {
    return Math.min (a,b,c); 
 }
 console.log(min(5,6,7));
+
+var dayNames =["luni", "marti", "miercuri", "joi", "vineri", "sambata", "duminica"];
+console.log(dayNames);
+ console.log(dayNames[2]);
+ console.log(dayNames.length);
+
+var pc={
+        cpu:{
+            familie:"i7",
+            frecventa: "2GHz",
+            producator: "Intel"
+
+        },
+
+        ram:{
+            clockSpeed:"15",
+            frecventa:2667
+
+        }
+};
+
+console.log(pc);
+console.log(pc.cpu);
+console.log(pc["cpu"]);
+console.log(pc.cpu.familie);
+console.log(pc.cpu["familie"]);
+console.log(pc["cpu"].familie);
+
+
+var yo = {
+    inaltime: 1.75,
+    greutatate: 75,
+    ochi:{
+            culoare:"caprui",
+            dioptrii: -2,
+            numar:2     
+    },
+    
+    buletin:{
+        serie:"ab",
+        numar:1234,
+        cnp: 1234567890,
+        loculNasterii: "R"
+    },
+
+    diplome:["bac", "licenta"],
+        
+
+};
+
+console.log(yo);
+
+var i=0
+while(i<dayNames.length){
+    console.log(dayNames[i]);
+    i=i+1;
+}
+
+for(var i=0; i<dayNames.length;i++) {
+    console.log(dayNames[i]);
+}
+
+console.log("=======================");
+
+var nr = [5,7,9, 17, 2, -7];
+
+// Suma elemente array
+
+function sum(arr){
+    var suma=0;
+    for (var i=0; i<arr.length;i++) {suma += arr[i]}
+    return suma;
+}
+
+console.log(sum(nr));
+
+
+// Produs elemente array;
+function prod(arr){
+    var product=1;
+    for (var i=0; i<arr.length;i++) {product *= arr[i]}
+    return product;
+}
+console.log(prod(nr));
+
+// Maxim elemente array - DE RELUAT;
+
+function maxim(arr){
+    var maxx=1;
+    for (var i=0; i<arr.length;i++) {maxx = Math.max(arr[i])}
+    return maxx;}
+
+    console.log(maxim(nr));
+
+// Sir palindrom;
+
 
 
