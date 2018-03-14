@@ -1,0 +1,60 @@
+#mainlayout {
+    max-width: 560px;
+    columns: 2 250px;
+    column-rule: 1px solid #999;
+    column-gap: 20px;
+    }
+
+   #container ul{
+        list-style-type: "none";
+    }
+    #mainlayout article p {
+        font-size: 1.1em;
+        line-height: 1.7em;
+        }
+        #mainlayout article figure {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        }
+        #mainlayout article figcaption {
+        font-style: italic;
+        font-size: 0.8em;
+        }
+        #mainlayout article figure img {
+        width: 100%;
+        border: 1px solid #297C21;
+        }
+        #mainlayout article h2 {
+        color: #297C21;
+        column-span: all;
+        font-size: 2.2em;
+        font-weight: normal;
+        }
+        #mainlayout article h3 {
+        column-span: all;
+        padding: 10px 0px;
+        border-top: 1px solid #999;
+        border-bottom: 1px solid #999;
+        font-weight: normal;
+        color: #333;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        }
+        #pagelayout > aside {
+            max-width: 350px;
+            columns: 2 160px;
+            margin-left: 10px;
+            }
+        #pagelayout > aside img {
+            width: 100%;
+            }
+         #features {
+            break-before: column;
+            }
+        #features ul li img {
+            clear: left;
+            width: 35%;
+            float: left;
+            }
+            

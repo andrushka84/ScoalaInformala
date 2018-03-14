@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabel si formular</title>
+    <script src="curs9.js"></script>
+    <style>
+        img{
+            width: 150px;
+            height: 150px;
+        }
+
+        table{
+            border-collapse:collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+<form method="post" onsubmit="valideaza(this, event)">
+     <fieldset style="border: 1px dashed #676767;">
+        <legend style="border: 1px dashed #676767;border-radius: 10px;padding: 0 5px;">New Account</legend> -->
+        <label for="nume">Nume</label>
+        <input type="text" id="nume"/> <br/>
+        <input type="button" value="Salveaza"/> <br/>
+     </fieldset>
+</form>
+
+<form method="post" onsubmit="valideaza(this, event)">
+        <fieldset style="border: 1px dashed #676767;">
+                <legend style="border: 1px dashed #676767;border-radius: 10px;padding: 0 5px;">New Account</legend> -->
+                <label for="nume">Nume</label>
+                <input type="text" id="nume"/> <br/>
+                <input type="button" value="Salveaza"/> <br/>
+        </fieldset>
+</form> <br/>
+
+<table border="1">  <!-- pozele sunt albe-->
+    <tr>
+        <td> <img onmouseover="schimbaInX(this, event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" onmouseout="schimbaInBlank(this,event)" alt=""></td> 
+        <td> <img onmouseover="schimbaInX(this, event)"src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" onmouseout="schimbaInBlank(this,event)" alt=""></td>
+        <td> <img onmouseover="schimbaInX(this, event)"src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" onmouseout="schimbaInBlank(this,event)" alt=""></td>
+    </tr>
+    <tr>
+        <td> <img onmouseover="schimbaInX(this, event)"src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" onmouseout="schimbaInBlank(this,event)" alt=""></td>
+        <td> <img onmouseover="schimbaInX(this, event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" onmouseout="schimbaInBlank(this,event)" alt=""></td>
+        <td> <img onmouseover="schimbaInX(this, event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" onmouseout="schimbaInBlank(this,event)" alt=""></td>
+    </tr>
+    <tr>
+        <td> <img onmouseover="schimbaInX(this, event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" onmouseout="schimbaInBlank(this,event)" alt=""></td>
+        <td> <img onmouseover="schimbaInX(this, event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" onmouseout="schimbaInBlank(this,event)"alt=""></td>
+        <td> <img onmouseover="schimbaInX(this, event)" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" onmouseout="schimbaInBlank(this,event)"alt=""></td>
+    </tr>
+
+</table>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather</title>
+    <link rel="stylesheet" href="style ajax.css">
+    <script src="weather.js"></script>
+</head>
+
+<body>
+        <h1>Vremea in lume</h1>
+        <div id="map">  </div> 
+        <div id="search">
+            <input type="text" id="nume" placeholder="Scrie orasul aici">  
+            <button id="acum" onclick="city()">Afiseaza vremea</button>
+            <button id = "future" onclick="prognoza()">Afiseaza prognoza</button> 
+        </div>
+        
+        <br/>
+        <br/>
+
+        
+    <!-- &#8451;= grade Celsius
+    Am pus span ca sa nu imi scrie valorile pe randul urmator-->
+    <div id="vremeaAcum" > 
+        <h3>Vremea acum</h3>
+        <hr/>
+        <img src="" alt="" id="icon">
+        <!-- <p> <span id="icon" class="now"> Icon</span></p> -->
+        <p> <span class="now">Descriere:</span>  <span id="descriere"></span></p>
+        <p> <span class="now">Umiditate (%):</span> <span id="umiditate"></span></p>
+        <p> <span class="now">Presiune atmosferica (hpa):</span> <span id="presiune"></span></p>
+        <p> <span class="now">Temperatura curenta (&#8451;)</span> : <span id="tempCurenta"></span></p>
+        <p> <span class="now">Minima zilei (&#8451;)</span> : <span id="minima"></span></p>
+        <p> <span class="now">Maxima zilei (&#8451;)</span> : <span id="maxima"></span></p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+
+
+    
+    <!-- script pt Google Maps, luat de pe site-ul cu Google Maps Javascript API  -->
+    <script>
+            function initMap(lat,long) {
+              var uluru = {lat: lat, lng: long};
+
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: uluru
+              });
+
+                var marker = new google.maps.Marker({
+                position: uluru,
+                map: map 
+
+             });
+             
+            }
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6melT1Yh-T2qDCZntFG0LI4oN_HhvPEI&callback=initMap">
+          </script>
+          
+    <div id="prognozaMeteo">
+            <h3>Vremea in urmatoarele zile</h3>
+            <hr/>
+            <img src="" alt="" id="iconn">
+            <p> <span class="now">Ora:</span>  <span id="ora"></span></p>
+            <p> <span class="now">Temperatura:</span> <span id="ttemp"></span></p>
+            <p> <span class="now">Descrierea vremii:</span> <span id="descr"></span></p>
+
+
+    <table id="tabel">
+            <tr>
+                <td> Ziua 1</td>
+                <td> Ziua 2</td>
+                <td> Ziua 3</td>
+                <td> Ziua 4</td>
+                <td> Ziua 5</td>
+                <td> Ziua 6</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+    </table>    
+
+    </div>
+</body>
+</html>

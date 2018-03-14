@@ -172,5 +172,19 @@ function maxim(arr){
 
 // Sir palindrom;
 
+console.log("================================");
+//Tabel de stari
 
+function sum(array){
+    var total =0
+    for (var i=0; i<array.length; i++){
+        total+=array[i];
+    }
+    return total;
+    
+}
 
+var arr111 =[1,5,10,-7];
+for(var i=0; i<arr111.length; i++) {
+    console.log(arr111[i]);
+}

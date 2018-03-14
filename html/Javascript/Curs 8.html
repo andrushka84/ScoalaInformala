@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <head>
+		<script>
+			function valideaza(elem, e){
+				e.preventDefault();
+				
+				console.log(elem,e);
+				
+				var elemNume = document.getElementById("nume");
+				var elemPrenume = document.getElementById("prenume");
+				var elemPass = document.getElementById("pass");
+				var elemRetype = document.getElementById("retypePass");
+				var elemToc = document.getElementById("toc");
+				
+				console.log(elemNume);
+				console.log(elemPrenume);
+				console.log(elemPass);
+				console.log(elemRetype);
+				console.log(elemToc);
+				
+				console.log(elemNume.value);
+				console.log(elemPrenume.value);
+				console.log(elemPass.value);
+				console.log(elemRetype.value);
+				console.log(elemToc.checked);
+			}
+		</script>
+	</head>
+<body>
+
+	<form method="POST" onsubmit="valideaza(this,event);">
+		<fieldset style="border: 1px dashed #676767;">
+		<legend style="border: 1px dashed #676767;border-radius: 10px;padding: 0 5px;">New Account</legend>
+	  
+		<label for="nume">Nume:</label> 
+		<input name="numeleMeu" id="nume" type="text"><br>
+		
+
+		<label for="prenume">Prenume:</label> 
+		<input name="prenumeleMeu" id="prenume" type="text"><br>
+			
+			
+		<label for="pass">Pass:</label> 
+		<input name="parolaMea" id="pass" type="password"><br>
+			
+			
+		<label for="retypePass">Retype Pass:</label> 
+		<input name="dinNouParola" id="retypePass" type="password"><br>
+		
+		
+		<input name="termeniSiConditii" id="toc" type="checkbox" /> <label  for="toc">I agree with Terms & Conditions</label>
+		<br />
+		<br />
+		<input type="submit" value="Salveaza"/>
+
+	  
+	 </fieldset>
+	</form>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var today = new Date();
+			console.log("today.getDate()",today.getDate());
+			console.log("today.getMonth()",today.getMonth()+1);
+			console.log("today.getFullYear()",today.getFullYear());
+			console.log("today.getTime()",today.getTime());
+			var yesterday = new Date(today.getTime()-24*60*60*1000);
+			console.log("yesterday.getDate()",yesterday.getDate());
+			console.log("yesterday.getMonth()",yesterday.getMonth()+1);
+			console.log("yesterday.getFullYear()",yesterday.getFullYear());
+			console.log("yesterday.getTime()",yesterday.getTime());
+			var todayString = today.getFullYear()+ "-" +
+				((today.getMonth()+1<10)?"0":"") + (today.getMonth()+1)+"-"+
+				((today.getDate()<10)?"0":"") + today.getDate();
+			console.log(todayString);
+			var yesterdayString = yesterday.getFullYear()+ "-" +
+				((yesterday.getMonth()+1<10)?"0":"") + (yesterday.getMonth()+1)+"-"+
+				((yesterday.getDate()<10)?"0":"") + yesterday.getDate();
+			console.log(yesterdayString);
+			//(conditie)?"valoare if true":"valoare if false"
+			
+			var todayResponse=null;
+			var yesterdayResponse=null;
+			
+			//today
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				  todayResponse = JSON.parse(this.responseText);
+                //   daca am primit ambele raspunsuri de la server
+				  if(todayResponse!==null && yesterdayResponse!==null){ 
+					drawList(todayResponse, yesterdayResponse);
+				  }
+				}
+			};
+			xhttp.open("GET", "https://api.fixer.io/"+todayString+"?base=RON", true);
+			xhttp.send();
+			
+			//yesterday
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				    yesterdayResponse = JSON.parse(this.responseText);
+				    if(todayResponse!==null && yesterdayResponse!==null){
+						drawList(todayResponse, yesterdayResponse);
+					}
+				}
+			};
+			xhttp.open("GET", "https://api.fixer.io/"+yesterdayString+"?base=RON&symbols=USD,EUR", true);
+			xhttp.send();
+			function drawList(cursValutar, cursValutarYesterday){
+				console.log(cursValutar,cursValutarYesterday);
+			   var str=""
+			   for(var i in cursValutar.rates){
+				   console.log(i, cursValutar.rates[i]);
+				   str += `<li>
+						<span class="currency">${i}</span>:
+						<span class="rate">${(1/cursValutar.rates[i]).toFixed(4)}</span>
+					</li>`
+				}
+				document.getElementById("containerCursValutar").innerHTML=str;
+				var d = cursValutar.date;
+				d = d.substr(8,2)+"."+d.substr(5,2)+"."+d.substr(0,4);
+				document.getElementById("containerData").innerHTML=d;
+			}
+		</script>
+		<style>
+		.rate{
+		    color: #535353;
+			font-style: italic;
+			text-decoration: underline;
+			margin-left: 10px;
+		}
+		.currency{
+			font-size: 1.2em;
+		}
+		</style>
+	</head>
+<body>
+	Cursul valutar din data de <span id="containerData"></span> este:
+	<ul id="containerCursValutar">
+		<li>
+			<span class="currency">USD</span>:
+			<span class="rate">3.80</span>
+		</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function valideaza(elem, e){
+				e.preventDefault();
+				
+				console.log(elem,e);
+				
+				var elemNume = document.getElementById("nume");
+				var elemPrenume = document.getElementById("prenume");
+				var elemPass = document.getElementById("pass");
+				var elemRetype = document.getElementById("retypePass");
+                var elemToc = document.getElementById("toc");
+				
+				console.log(elemNume);
+				console.log(elemPrenume);
+				console.log(elemPass);
+				console.log(elemRetype);
+				console.log(elemToc);
+				
+				if(elemNume.value.length<3){
+                    elemNume.style.backgroundColor="red";
+                    document.getElementById("numeParagraf").style.display="";
+				}else{
+                    elemNume.style.backgroundColor="";
+                    document.getElementById("numeParagraf").style.display ="none";
+                }
+                
+				if(elemPrenume.value.length<3){
+                    elemPrenume.style.backgroundColor="red";
+                    document.getElementById("prenumeParagraf").style.display="";
+				}else{
+                    elemPrenume.style.backgroundColor="";
+                    document.getElementById("prenumeParagraf").style.display ="none";
+				}
+				if(elemPass.value.length<6){
+                    elemPass.style.backgroundColor="red";
+                    document.getElementById("passParagraf").style.display="";
+				}else{
+                    elemPass.style.backgroundColor="";
+                    document.getElementById("passParagraf").style.display ="none";
+				}
+				if(elemRetype.value!==elemPass.value || elemRetype.value.length<6){
+                    elemRetype.style.backgroundColor="red";
+                    document.getElementById("apassParagraf").style.display="";
+				}else{
+                    elemRetype.style.backgroundColor="";
+                    document.getElementById("apassParagraf").style.display ="none";
+				}
+				if(!elemToc.checked){
+                    elemToc.nextElementSibling.style.backgroundColor="red";
+                    document.getElementById("tcParagraf").style.display="";
+				}else{
+                    elemToc.nextElementSibling.style.backgroundColor="";
+                    document.getElementById("tcParagraf").style.display ="none";
+				}
+				console.log(elemNume.value);
+				console.log(elemPrenume.value);
+				console.log(elemPass.value);
+				console.log(elemRetype.value);
+				console.log(elemToc.checked);
+            }
+            
+            
+            var x = e.key;
+            function myFunction(elem,e){
+					
+				e.preventDefault();
+
+
+                    if(x>="A" && x<"Z" || x >="a" && x<"z" || x == " " || x =="'" ||x =="_"){
+                        
+                    } else { 
+                        alert ("You need to press a letter a-z or A-Z or a space or an apostrophe or an _ .")
+                    }
+                };
+
+
+		</script>
+	</head>
+<body>
+
+	<form method="post" onsubmit="valideaza(this,event);">
+		<fieldset style="border: 1px dashed #676767;">
+		<legend style="border: 1px dashed #676767;border-radius: 10px;padding: 0 5px;">New Account</legend>
+	  
+		<label for="nume">Nume:</label> 
+        <input name="numeleMeu" id="nume" type="text" onkeypress = "myFunction(this, event);"><br>
+         
+		<p style="display:none" id="numeParagraf">Nu ai scris bine</p>
+
+		<label for="prenume">Prenume:</label> 
+		<input name="prenumeleMeu" id="prenume" type="text" onkeypress = "myFunction(this, event);"><br>
+		<p style="display:none" id="prenumeParagraf">Nu ai scris bine</p>	
+			
+		<label for="pass">Pass:</label> 
+        <input name="parolaMea" id="pass" type="password"><br>
+        <p style="display:none" id="passParagraf">Parola invalida</p>
+			
+			
+		<label for="retypePass">Retype Pass:</label> 
+		<input name="dinNouParola" id="retypePass" type="password" ><br>
+		<p style="display:none" id="apassParagraf">Parola invalida</p>
+			
+		
+		<input name="termeniSiConditii" id="toc" type="checkbox" /> <label  for="toc">I agree with Terms & Conditions</label>
+        <p style="display:none" id="tcParagraf">Accepta Termenii</p> 
+        
+        
+        <br />
+        <br />
+        
+            
+		<input type="submit" value="Salveaza"/>
+	  
+	 </fieldset>
+	</form>
+
+
+
+</body>
+</html>

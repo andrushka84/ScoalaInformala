@@ -1,0 +1,24 @@
+.now{
+    font-weight: bold;
+    font-style: italic;
+    color: blueviolet;
+}
+#map{
+    height: 400px;
+    width: 400px;
+    float:right;
+    margin: 0px;
+}
+
+h3{
+    margin: 0px;
+}
+
+table, tr, td{
+    border: 1px solid black;
+    
+}
+
+table{
+    border-collapse: collapse;
+}
