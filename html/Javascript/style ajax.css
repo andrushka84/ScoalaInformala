@@ -22,3 +22,20 @@ table, tr, td{
 table{
     border-collapse: collapse;
 }
+
+button{
+    background-color: #4CAF50;
+    border:none;
+    color: white; 
+    padding: 8px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+#nume{
+    height:25px ;
+}
+
+#search{
+    margin-top: 50px;
+}
