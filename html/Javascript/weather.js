@@ -69,9 +69,7 @@ request.send();
 //         var vreme = JSON.parse(this.responseText);
 //         console.log(vreme);     
 // }
-// var descriere = vreme.weather[0].description;
-// var temperatura = vreme.main.temp;
-// var ora = vreme.main.temp ;
+
 // }
 
 // }
