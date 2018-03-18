@@ -2,146 +2,135 @@
 <html lang="en">
 <head>
     <title>Weather</title>
-    <link rel="stylesheet" href="style ajax.css">
     <script src="weather.js"></script>
+    <link rel="stylesheet" href="style ajax.css">
 </head>
 
 <body>
         
-        <div id="map">  </div> 
-        <div id="search">
-            <input type="text" id="nume" placeholder="Scrie orasul aici">  
-            <button id="acum" onclick="city()">Afiseaza vremea</button>
-            <button id = "future" onclick="prognoza()">Afiseaza prognoza</button> 
-        </div>
+        <div class="container">
+                
+                <div id="search">
+                    <input type="text" id="nume" placeholder="Scrie orasul aici">  
+                    <button id="acum" onclick="city()">Afiseaza vremea</button>
+                    <button id="future" onclick="prognoza()">Afiseaza prognoza</button> 
+                </div>
+                
+                <br/>
+                <br/>
         
-        <br/>
-        <br/>
+                
+            <!-- &#8451;= grade Celsius
+            Am pus span ca sa nu imi scrie valorile pe randul urmator-->
+            <div id="vremeaAcum" > 
+                <br/>
+                <h4>Vremea acum</h4>
+                <hr/>
 
+                <div id="map">  </div> 
+                <img src="" alt="" id="icon">
+                <!-- <p> <span id="icon" class="now"> Icon</span></p> -->
+                <p> <span class="now">Descriere:</span>  <span id="descriere"></span></p>
+                <p> <span class="now">Umiditate (%):</span> <span id="umiditate"></span></p>
+                <p> <span class="now">Presiune atmosferica (hpa):</span> <span id="presiune"></span></p>
+                <p> <span class="now">Temperatura curenta (&#8451;)</span> : <span id="tempCurenta"></span></p>
+                <p> <span class="now">Minima zilei (&#8451;)</span> : <span id="minima"></span></p>
+                <p> <span class="now">Maxima zilei (&#8451;)</span> : <span id="maxima"></span></p>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+            </div>
         
-    <!-- &#8451;= grade Celsius
-    Am pus span ca sa nu imi scrie valorile pe randul urmator-->
-    <div id="vremeaAcum" > 
+        
             
-        <h3>Vremea acum</h3>
-        <hr/>
-        <img src="" alt="" id="icon">
-        <!-- <p> <span id="icon" class="now"> Icon</span></p> -->
-        <p> <span class="now">Descriere:</span>  <span id="descriere"></span></p>
-        <p> <span class="now">Umiditate (%):</span> <span id="umiditate"></span></p>
-        <p> <span class="now">Presiune atmosferica (hpa):</span> <span id="presiune"></span></p>
-        <p> <span class="now">Temperatura curenta (&#8451;)</span> : <span id="tempCurenta"></span></p>
-        <p> <span class="now">Minima zilei (&#8451;)</span> : <span id="minima"></span></p>
-        <p> <span class="now">Maxima zilei (&#8451;)</span> : <span id="maxima"></span></p>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-    </div>
+            <!-- script pt Google Maps, luat de pe site-ul cu Google Maps Javascript API  -->
+            <script>
+                    function initMap(lat, long) {
+                        
+                      var uluru = {lat: lat, lng: long};
+        
+                      var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 8,
+                        center: uluru
+                      });
+        
+                        var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map 
+        
+                     });
+                     
+                    }
+                  </script>
+                  <script async defer
+                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6melT1Yh-T2qDCZntFG0LI4oN_HhvPEI&callback=initMap">
+                  </script>
+                  
+            <div id="prognozaMeteo">
+                <br/>
+                    <h4>Vremea in urmatoarele zile</h4>
+                    <hr/>
+        
+            <div id="z1" class="box"> 
+
+                <!--header, icon, ora, temperatura, descriere -->
+                <!-- z1 = ziua 1; th = "table" header; d1 = data 1 -->
+                <p> <span class="th" id="d1" > </span></p>
+                <img src="" alt="" id="icon1.1"> 
+                <p><span> Ora:</span> <span id="o1.1"></span></p>
+                <p><span> Temperatura:</span> <span id="t1.1"></span></p>
+                <p><span> Descriere:</span> <span id="d1.1"></span></p>
+
+            </div>
+            <div id="z2" class="box">
+                <p><span class="th" id="d2"></span></p>
+                <img src="" alt="" id="icon2.1">
+                <p><span> Ora:</span> <span id="o2.1"></span></p>
+                <p><span> Temperatura:</span> <span id="t2.1"></span></p>
+                <p><span> Descriere:</span> <span id="d2.1"></span></p>
+
+            </div>
+            <div id="z3" class= "box">
+                <p><span class="th" id="d3"></span></p>
+                <img src="" alt="" id="icon3.1">
+                <p><span> Ora:</span> <span id="o3.1"></span></p>
+                <p><span> Temperatura:</span> <span id="t3.1"></span></p>
+                <p><span> Descriere:</span> <span id="d3.1"></span></p>
 
 
-    
-    <!-- script pt Google Maps, luat de pe site-ul cu Google Maps Javascript API  -->
-    <script>
-            function initMap(lat,long) {
-              var uluru = {lat: lat, lng: long};
-
-              var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 8,
-                center: uluru
-              });
-
-                var marker = new google.maps.Marker({
-                position: uluru,
-                map: map 
-
-             });
-             
-            }
-          </script>
-          <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6melT1Yh-T2qDCZntFG0LI4oN_HhvPEI&callback=initMap">
-          </script>
-          
-    <div id="prognozaMeteo">
-            <h3>Vremea in urmatoarele zile</h3>
-            <hr/>
-            <img src="" alt="" id="iconn">
-            <p> <span class="now">Ora:</span>  <span id="ora"></span></p>
-            <p> <span class="now">Temperatura:</span> <span id="ttemp"></span></p>
-            <p> <span class="now">Descrierea vremii:</span> <span id="descr"></span></p>
+            </div>
+            <div id="z4" class="box">
+                <p><span class="th" id="d4"></span></p>
+                <img src="" alt="" id="icon4.1">
+                <p><span> Ora:</span> <span id="o4.1"></span></p>
+                <p><span> Temperatura:</span> <span id="t4.1"></span></p>
+                <p><span> Descriere:</span> <span id="d4.1"></span></p>
 
 
-    <table id="tabel">
-            <tr>
-                <td> Ziua 1</td>
-                <td> Ziua 2</td>
-                <td> Ziua 3</td>
-                <td> Ziua 4</td>
-                <td> Ziua 5</td>
-                <td> Ziua 6</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
+            </div>
+            <div id="z5" class="box">
+                <p><span class="th" id="d5"></span></p>
+                <img src="" alt="" id="icon5.1">
+                <p><span> Ora:</span> <span id="o5.1"></span></p>
+                <p><span> Temperatura:</span> <span id="t5.1"></span></p>
+                <p><span> Descriere:</span> <span id="d5.1"></span></p>
 
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+                
+            </div>
 
-    </table>    
+            <div id="z6" class="box">
+                <p><span class="th" id="d6"></span></p>
+                <img src="" alt="" id="icon6.1">
+                <p><span> Ora:</span> <span id="o6.1"></span></p>
+                <p><span> Temperatura:</span> <span id="t6.1"></span></p>
+                <p><span> Descriere:</span> <span id="d6.1"></span></p>
 
-    </div>
+
+            </div>
+                 
+
+        </div>
 </body>
 </html>
