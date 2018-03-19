@@ -68,3 +68,16 @@ button{
     padding-left: 20px;
 }
 
+.forecast{
+    font-size: 10pt;
+}
+
+.g{
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+#prognozaMeteo{
+    display: flex;
+    justify-content: space-evenly;
+}

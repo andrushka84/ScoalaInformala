@@ -97,6 +97,7 @@ function prognoza() {
 
             for (var i = 0; i < vreme.list.length; i++) {
                 var col1 = vreme.list[i].dt_txt;
+                console.log(col1);
 
             }
             // Calculez cate ore sa-mi afiseze in prima zi
@@ -120,37 +121,93 @@ function prognoza() {
             console.log(y);
 
 
-         //***********************************************************************************************   
+//********************************************************************************************************************************************************************************************************* 
 
-            var testDiv = document.createElement("div");
+            var testDiv1 = document.createElement("div");
 
             for (var j = 1; j < y; j++) {
 
-                testDiv.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].main.weather.icon + '.png>' +
-                    '<span> Ora:' + vreme.list[j].dt_txt + '<span> <br/>' +
-                    '<span> Temperatura:' + vreme.list[j].main.temp + '<span> <br/>' +
-                    '<span> Descriere:' + vreme.list[j].main.weather.description + '<span> <br/>'
+                testDiv1.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>'+
+                    '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>'+ '<br/>' +
+                    '<span class="g">' +'Temperatura: '  + '</span>'+ '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">'+ ' &#8451'+ '<span/>' + '<br/>' +
+                    '<span class="g">' +'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description +'</span class = "forecast">' + '<br/>'
             }
             var z1Div = document.getElementById("z1");
-            z1Div.appendChild(testDiv);
+            z1Div.appendChild(testDiv1);
 
+// **********************************************************************************************************************************************************************************************************
 
-            // var div2 = document.createElement("div");
+            var testDiv2 = document.createElement("div");
 
-            // for (var v=y+1; v<y+9; v++){
+                for (var j = y; j < y+8; j++) {
 
-            //     div2.innerHTML += '<img src = '+ "http://openweathermap.org/img/w/"+vreme.list[v].main.weather.icon +".png"
-            //                         '<span> Ora:' + vreme.list[v].dt_txt + '<span> <br/>'+
-            //                         '<span> Temperatura:' + vreme.list[v].main.temp + '<span> <br/>'+
-            //                         '<span> Descriere:' + vreme.list[v].main.weather.description +'<span> <br/>'
-            //     }
+                    testDiv2.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>'+
+                        '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>'+ '<br/>' +
+                        '<span class="g">' +'Temperatura: '  + '</span>'+ '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">'+ ' &#8451'+ '<span/>' + '<br/>' +
+                        '<span class="g">' +'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description +'</span class = "forecast">' + '<br/>'
+                }
+                var z2Div = document.getElementById("z2");
+                z2Div.appendChild(testDiv2);
+            
+ // ************************************************************************************************************************************************************************
+               var testDiv3 = document.createElement("div");
 
-            //     var z2Div = document.getElementById("z2");
-            //     z2Div.appendChild(div2);
+                for (var j = y+8; j < y+16; j++) {
 
+                    testDiv3.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>'+
+                        '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>'+ '<br/>' +
+                        '<span class="g">' +'Temperatura: '  + '</span>'+ '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">'+ ' &#8451'+ '<span/>' + '<br/>' +
+                        '<span class="g">' +'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description +'</span class = "forecast">' + '<br/>'
+                }
+                var z3Div = document.getElementById("z3");
+                z3Div.appendChild(testDiv3);
+  
+// ************************************************************************************************************************************************************************
+     
 
+                var testDiv4 = document.createElement("div");
 
+                for (var j = y+16; j < y+24; j++) {
 
+                    testDiv4.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>'+
+                        '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>'+ '<br/>' +
+                        '<span class="g">' +'Temperatura: '  + '</span>'+ '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">'+ ' &#8451'+ '<span/>' + '<br/>' +
+                        '<span class="g">' +'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description +'</span class = "forecast">' + '<br/>'
+                }
+                var z4Div = document.getElementById("z4");
+                z4Div.appendChild(testDiv4);
+
+    // ************************************************************************************************************************************************************************
+      
+                var testDiv5 = document.createElement("div");
+
+                for (var j = y+24; j < y+32; j++) {
+
+                    testDiv5.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>'+
+                        '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>'+ '<br/>' +
+                        '<span class="g">' +'Temperatura: '  + '</span>'+ '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">'+ ' &#8451'+ '<span/>' + '<br/>' +
+                        '<span class="g">' +'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description +'</span class = "forecast">' + '<br/>'
+                }
+                var z5Div = document.getElementById("z5");
+                z5Div.appendChild(testDiv5);
+
+// ************************************************************************************************************************************************************************
+     
+                var testDiv6 = document.createElement("div");
+
+                for (var j = y+32; j < y+40; j++) {
+
+                    testDiv6.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>'+
+                        '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>'+ '<br/>' +
+                        '<span class="g">' +'Temperatura: '  + '</span>'+ '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">'+ ' &#8451'+ '<span/>' + '<br/>' +
+                        '<span class="g">' +'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description +'</span class = "forecast">' + '<br/>'
+                }
+                var z6Div = document.getElementById("z6");
+                z6Div.appendChild(testDiv6);
+
+// ************************************************************************************************************************************************************************
+
+            
         }
     }
 
