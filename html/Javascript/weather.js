@@ -56,10 +56,9 @@ function prognoza() {
         var oras = document.getElementById("nume").value;
         var url = 'https://api.openweathermap.org/data/2.5/forecast?appid=69518b1f8f16c35f8705550dc4161056&units=metric&q=' + oras;
     }   
-
         // Fac capul de tabel cu datele alea albastre
         // new Date () imi arata data de azi in format full date (data, ziua, ora, minut, secunda)
-        // toDateString = imi extrage ziua si data
+        // toDateString = imi extrage ziua si data; se pare ca toTimeString nu suporta browserul
         var d1 = new Date();
         var dt1 = d1.toDateString();
         document.getElementById("d1").innerHTML=dt1;
@@ -100,11 +99,8 @@ function prognoza() {
         var col1= vreme.list[i].dt_txt;
 
     }
-
     // Calculez cate ore sa-mi afiseze in prima zi
-    
     var b= d1.getHours();
-
                if (((24-b)/3)<=8 && ((24-b)/3)>7) {
             var y = 8;
         } else if (((24-b)/3)<=7 && ((24-b)/3)>6) {
@@ -121,29 +117,43 @@ function prognoza() {
             var y = 2;
         } else {var y = 1}
 
-       console.log(y);
+        console.log(y);
 
-        function prima(){
-            for (var j=1; j<y; j++){
-
-                var azi = vreme.list[j].dt_txt;
-                console.log(azi);
-                }
+       var testDiv = document.createElement("div");
+       
+       for (var j=1; j<y; j++){
+           
+        testDiv.innerHTML += '<img src = '+ "http://openweathermap.org/img/w/"+vreme.list[j].main.weather.icon
+                             +".png>"+
+                            '<span> Ora:' + vreme.list[j].dt_txt + '<span> <br/>'+
+                            '<span> Temperatura:' + vreme.list[j].main.temp + '<span> <br/>'+
+                            '<span> Descriere:' + vreme.list[j].main.weather.description +'<span> <br/>'
         }
-        var m = vreme.list.length - y - (8*4)+1;
-        console.log(m);
+        var z1Div = document.getElementById("z1");
+        z1Div.appendChild(testDiv);
+
+
+        // var div2 = document.createElement("div");
+
+        // for (var v=y+1; v<y+9; v++){
+           
+        //     div2.innerHTML += '<img src = '+ "http://openweathermap.org/img/w/"+vreme.list[v].main.weather.icon +".png"
+        //                         '<span> Ora:' + vreme.list[v].dt_txt + '<span> <br/>'+
+        //                         '<span> Temperatura:' + vreme.list[v].main.temp + '<span> <br/>'+
+        //                         '<span> Descriere:' + vreme.list[v].main.weather.description +'<span> <br/>'
+        //     }
+    
+        //     var z2Div = document.getElementById("z2");
+        //     z2Div.appendChild(div2);
         
-       
-        // function ultima() {
-        //     for (var k=1; k>39-m; k++){
-        //         var last = vreme.list[k].dt_txt;
-        //         console.log(last);
-        //         }
-        // }
-       
 
-        }
+
+
     } 
+
+
+
+
 
 
 prog.open("GET", url, true);
@@ -151,4 +161,4 @@ prog.send();
 
 }
 
-
+}
