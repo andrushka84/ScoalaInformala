@@ -6,7 +6,6 @@ function city() {
         var url = "https://api.openweathermap.org/data/2.5/weather?appid=69518b1f8f16c35f8705550dc4161056&units=metric&q=" + oras;
     }
 
-
     var request = new XMLHttpRequest();
     // Ma intereseaza serverul sa fi terminat de incarcat (ready state === 4) si
     // Si sa nu dea eroare; status === 200 inseamna ca e OK.
