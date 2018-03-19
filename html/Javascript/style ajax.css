@@ -1,5 +1,5 @@
 .container{
-    margin: 50px;
+    margin: 10px;
 }
 
 .now{
@@ -12,6 +12,7 @@
 #icon{
     padding-left: 15px;
 }
+
 #map{
     height: 300px;
     width: 400px;
@@ -79,5 +80,7 @@ button{
 
 #prognozaMeteo{
     display: flex;
+    /* align-items: flex-start; */
     justify-content: space-evenly;
 }
+
