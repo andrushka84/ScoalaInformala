@@ -58,13 +58,16 @@ function prognoza() {
     // Fac capul de tabel cu datele alea albastre
     // new Date () imi arata data de azi in format full date (data, ziua, ora, minut, secunda)
     // toDateString = imi extrage ziua si data; se pare ca toTimeString nu suporta browserul
+
     var d1 = new Date();
-    var dt1 = d1.toDateString();
-    document.getElementById("d1").innerHTML = dt1;
 
     var month = d1.getMonth();
     var year = d1.getFullYear();
 
+    var dt1 = d1.toDateString();
+    document.getElementById("d1").innerHTML = dt1;
+
+   
     var d2 = new Date(year, month, d1.getDate() + 1);
     var dt2 = d2.toDateString();
     document.getElementById("d2").innerHTML = dt2;
@@ -128,7 +131,7 @@ function prognoza() {
 
                 testDiv1.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>' +
                     '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>' + '<br/>' +
-                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">' + ' &#8451' + '<span/>' + '<br/>' +
+                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<br/>' +
                     '<span class="g">' + 'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description + '</span class = "forecast">' + '<br/>'
             }
             var z1Div = document.getElementById("z1");
@@ -139,10 +142,11 @@ function prognoza() {
             var testDiv2 = document.createElement("div");
 
             for (var j = y; j < y + 8; j++) {
+ 
 
                 testDiv2.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>' +
                     '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>' + '<br/>' +
-                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">' + ' &#8451' + '<span/>' + '<br/>' +
+                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<br/>' +
                     '<span class="g">' + 'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description + '</span class = "forecast">' + '<br/>'
             }
             var z2Div = document.getElementById("z2");
@@ -155,7 +159,7 @@ function prognoza() {
 
                 testDiv3.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>' +
                     '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>' + '<br/>' +
-                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">' + ' &#8451' + '<span/>' + '<br/>' +
+                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>'  + '<br/>' +
                     '<span class="g">' + 'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description + '</span class = "forecast">' + '<br/>'
             }
             var z3Div = document.getElementById("z3");
@@ -170,7 +174,7 @@ function prognoza() {
 
                 testDiv4.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>' +
                     '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>' + '<br/>' +
-                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">' + ' &#8451' + '<span/>' + '<br/>' +
+                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<br/>' +
                     '<span class="g">' + 'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description + '</span class = "forecast">' + '<br/>'
             }
             var z4Div = document.getElementById("z4");
@@ -184,7 +188,7 @@ function prognoza() {
 
                 testDiv5.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>' +
                     '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>' + '<br/>' +
-                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">' + ' &#8451' + '<span/>' + '<br/>' +
+                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>'  + '<br/>' +
                     '<span class="g">' + 'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description + '</span class = "forecast">' + '<br/>'
             }
             var z5Div = document.getElementById("z5");
@@ -198,7 +202,7 @@ function prognoza() {
 
                 testDiv6.innerHTML += '<img src = ' + 'http://openweathermap.org/img/w/' + vreme.list[j].weather[0].icon + '.png>' + '<br/>' +
                     '<span class="g">' + 'Ora: ' + '</span>' + '<span class = "forecast">' + vreme.list[j].dt_txt + '</span>' + '<br/>' +
-                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>' + '<span class = "forecast">' + ' &#8451' + '<span/>' + '<br/>' +
+                    '<span class="g">' + 'Temperatura: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].main.temp + '</span>'  + '<br/>' +
                     '<span class="g">' + 'Descriere: ' + '</span>' + '<span class ="forecast">' + vreme.list[j].weather[0].description + '</span class = "forecast">' + '<br/>'
             }
             var z6Div = document.getElementById("z6");

@@ -81,6 +81,7 @@ button{
 #prognozaMeteo{
     display: flex;
     /* align-items: flex-start; */
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    padding: 1px;
 }
 

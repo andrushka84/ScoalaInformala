@@ -2,15 +2,34 @@
 <html>
 	<head>
 		<script>
-            var listaClienti =null
+            // var listaClienti =null
+            // var xhttp= new XMLHttpRequest();
+            // xhttp.onreadystatechange = function(){
+            
+            // if(this.readyState===4 && this.status===200) {
+            // listaClienti = JSON.parse(this.responseText);
+			// drawClienti();
+			
+
+
+
+
+			var listaClienti =null
             var xhttp= new XMLHttpRequest();
             xhttp.onreadystatechange = function(){
             
             if(this.readyState===4 && this.status===200) {
-            listaClienti = JSON.parse(this.responseText);
-            drawClienti();
+			listaClienti = [];
+			var server = JSON.parse(this.responseText);
 
-            }
+			for (var i in server) {
+				listaClienti.push(server[i]);
+			}
+
+			}
+			
+			drawClienti();
+
         }
             xhttp.open("GET", "https://inceput-firebase.firebaseio.com/.json", true);
             xhttp.send();
@@ -20,6 +39,8 @@
 			var tabel=document.querySelector("#listaClienti tbody");
 			var str="";
 			for(var i=0;i<listaClienti.length;i++){
+
+				// for(var i in listaClienti){
 				//listaClienti[i].nume
 				//listaClienti[i].prenume
 				//listaClienti[i].varsta

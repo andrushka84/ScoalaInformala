@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Formular clienti Firebase  </title>
+    <script src="Form FB.js"></script>
+</head>
+<body>
+
+    <form method="post" action="https://inceput-firebase.firebaseio.com/.json" onsubmit="sendAsJson(this, event)">
+        <label for="nume">Nume:</label>
+        <input type="text" id="name" name="nume"> <br/> <br/>
+
+        <label for="prenume">Prenume:</label>
+        <input type="text" id="prenume" name="prenume"> <br/> <br/>
+
+        <label for="age">Varsta:</label>
+        <input type="text" id="age" name="varsta"> <br/> <br/>
+
+        <label for="phone">Telefon:</label>
+        <input type="text" id="phone" name="telefon"> <br/> <br/>
+
+        <button type="submit">Salveaza</button> <br/>
+
+
+    </form>
+    
+</body>
+</html>
