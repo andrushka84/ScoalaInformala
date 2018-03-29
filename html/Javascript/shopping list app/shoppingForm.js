@@ -24,13 +24,13 @@ var indexModificat=-1;
 
 // Creez o functie care imi deseneaza tabelul cu produse
 function drawCumparaturi(){
-    var tabel=document.querySelector("#listaCumparaturi tbody");
+    var tabel=document.querySelector(".listaCumparaturi tbody");
     var str="";
     for(var i=0;i<listaCumparaturi.length;i++){
         
         var rand = `<tr>
         <td>${listaCumparaturi[i].produs}</td>
-        <td> <button onclick="strike()" ondblclick="clickTwice()"> Mark as bought </button> <td/>
+        <td> <button class="mark" onclick="strike(this)"> Mark as bought </button> <td/>
            
         </tr>`;
         str +=rand;
@@ -48,7 +48,7 @@ function sortAsc(){
        drawCumparaturi();
 }
 
-// Creez o functie care imi sorteaza descendent; tutorialul astahttps://www.youtube.com/watch?v=PQEe9HNwCUY
+// Creez o functie care imi sorteaza descendent; tutorialul asta https://www.youtube.com/watch?v=PQEe9HNwCUY
 // listaCumparaturi a devenit un obiect
 
 function sortDesc() {
@@ -76,18 +76,10 @@ function sortDesc() {
 
 
 
-// Creez o functie care imi face o clasa de CSS on click 
+// Creez o functie care imi face o clasa de CSS cand dau click
+// var myStuff = document.querySelector(".listaCumparaturi td" ) inseamna ca imi ia clasa listaCumparaturi sau td din tabel
 
-
-function strike(){
-    var myStuff = document.querySelector("listaCumparaturi, td");
-    myStuff.classList.add("strike")
-}
-
-
-// Creez o functie care la dblclick imi sterge clasa de CSS creata la pasul anterior
-
-function clickTwice(){
-    var myStuff = document.querySelector("listaCumparaturi, td");
-    myStuff.classList.remove("strike")
+function strike(element){
+    if (element.parentElement.parentElement.classList !== null) {element.parentElement.parentElement.classList.add("strike")}
+    else {element.parentElement.parentElement.classList.remove("strike")};
 }

@@ -40,7 +40,6 @@
     margin-left: 50px;
     border-radius: 10px;
     font-size: 10pt;
-
 }
 
 #first{
@@ -51,8 +50,21 @@
     margin-left: 5px;
 }
 
-#theader {
+thead{
     font-weight: bold;
+    font-size: 10pt;
+}
+
+.mark{
+    font-size: 10pt;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+}
+
+.listaCumparaturi {
+    margin-left: 50px;
 }
 
 .strike{
