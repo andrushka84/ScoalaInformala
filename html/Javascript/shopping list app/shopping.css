@@ -55,16 +55,10 @@
     font-weight: bold;
 }
 
-
-#itemList {
-    margin-left: 50px;
-    font-size: 10pt;
-    margin-top: 10px;
+.strike{
+    text-decoration: line-through;
 }
 
-mark{
-    background-color: blueviolet;
-    color: white;
-    text-align: center;
-    border:none;
+.empty {
+    text-decoration: none;
 }

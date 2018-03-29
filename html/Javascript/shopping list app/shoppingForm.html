@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Shopping Form</title>
+    <script src="shoppingForm.js"></script>
+    <link rel="stylesheet" href="shopping.css">
+</head>
+<body onload="drawCumparaturi()" >
+    
+    <form  method="post" onsubmit="addItem(this,event);">
+        <input type="text" id="casuta" placeholder="Write your item here">
+        <button id="add" type="submit">Add item</button>
+    </form>
+
+    <button class="sort" onclick="sortAsc()">Sort asc</button>
+    <button class="sort" onclick="sortDesc()">Sort desc</button>
+
+
+    <table id="listaCumparaturi">
+        <thead> <tr>
+                    <th class="theader">Item description</th>
+                    <th class="theader">Action</th>    
+                </tr>
+        </thead>
+            
+        <tbody>
+
+        </tbody>
+
+        </table>
+
+</body>
+</html>
