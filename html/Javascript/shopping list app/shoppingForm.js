@@ -23,6 +23,8 @@ var indexModificat=-1;
         }
 
 // Creez o functie care imi deseneaza tabelul cu produse
+// var tabel=document.querySelector(".listaCumparaturi tbody") inseamna listaCumparaturi SAU tbody
+
 function drawCumparaturi(){
     var tabel=document.querySelector(".listaCumparaturi tbody");
     var str="";
@@ -56,30 +58,12 @@ function sortDesc() {
     drawCumparaturi();
 }
 
-// Sortare dupa index - nu merge pentru ca nu sorteaza alfabetic, iar in tema tb sa fie alfabetic
-// function sortDesc(indexModificat){
-
-//     listaCumparaturi.sort(function(a,b){
-//         if(a[indexModificat]>b[indexModificat]){
-//             return 1;
-//         }else if(a[indexModificat]<b[indexModificat]){
-//             return -1;
-//         }else{
-//             return 0;
-//         }
-//     });
-
-//     listaCumparaturi.reverse();
-
-//     drawCumparaturi();
-// }
-
-
 
 // Creez o functie care imi face o clasa de CSS cand dau click
-// var myStuff = document.querySelector(".listaCumparaturi td" ) inseamna ca imi ia clasa listaCumparaturi sau td din tabel
-
+// tutorialul asta  https://www.w3schools.com/jsref/prop_element_classlist.asp
 function strike(element){
-    if (element.parentElement.parentElement.classList !== null) {element.parentElement.parentElement.classList.add("strike")}
-    else {element.parentElement.parentElement.classList.remove("strike")};
+
+    if (element.parentElement.parentElement.classList.contains("strike")) {element.parentElement.parentElement.classList.remove("strike")}
+    else {element.parentElement.parentElement.classList.add("strike")};
+
 }
