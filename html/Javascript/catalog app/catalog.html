@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+    <title>Catalog note</title>
+</head>
+<body onload="drawNote()">
+    
+
+<div id="lista_elevi_wrapper">
+
+<div class="title">
+        <p><h1>Lista elevi</h1></p>
+</div>
+
+
+<form class="elevi">
+
+        <label for="casuta" class="ab">Nume:</label>
+        <input type="text" id="casuta" placeholder="Scrie numele aici" class="input"> <br/>
+                
+        <button id="elev" class="btn" onclick="addStudent(form, event)">Adauga elev</button> <br/>
+        <button class="sort">
+            Sorteaza ascendent dupa medii
+        </button>
+        
+        <button class="sort">
+            Sorteaza descendent dupa medii
+        </button>
+        
+    
+        
+        <table class="listaElevi">
+                <thead> <tr>
+                            <th class="theader">Nume</th>
+                            <th class="theader">Medie note</th>    
+                            <th class="theader"></th>
+                        </tr>
+                </thead>
+                    
+                <tbody>
+        
+                </tbody>
+        
+                </table>
+        
+
+            </form>
+
+        </div>
+
+
+        <div id="note_elev_wrapper">
+            <button id="hide" class="btn" onclick="hide()">Ascunde notele</button>
+        
+            <form class="elevi">
+                    <label for="nota" class="ab">Nota:</label>
+                    <input type="text" id="nota" placeholder="Scrie nota aici" class="input"> <br/>
+                
+                    <button id="elev" class="btn" onclick="addGrade(form, event)">Adauga nota</button> <br/>
+ 
+            <button class="sort" onclick="sortAsc()">
+                        Sorteaza ascendent notele
+                    </button>
+                    
+                    <button class="sort" onclick="sortDesc()">
+                        Sorteaza descendent notele
+                    </button>
+        
+                    <table id="listaNote">
+                            <thead> <tr>
+                                        <th class="theader">Nota</th>
+                                       
+                                    </tr>
+                            </thead>
+                                
+                            <tbody id="bd">
+                    
+                            </tbody>
+                    
+                            </table>
+
+                        </form>
+
+
+
+
+
+</div>   
+
+
+</body>
+</html>

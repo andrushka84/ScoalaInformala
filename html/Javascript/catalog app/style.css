@@ -1,0 +1,45 @@
+body{
+    background-color: aquamarine;
+}
+
+.elevi, #note_elev_wrapper{
+    border: 1px solid black;
+}
+
+.sort{
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 10pt;
+}
+
+.btn{
+    background-color: steelblue;
+    color: white;
+    border:none;
+    border-radius: 1px;
+    font-size: 10pt;
+}
+
+.input{
+    border: none;
+    font-size: 10pt;
+}
+
+.ab{
+    font-size: 10pt;
+}
+
+.grades{
+    background-color: teal;
+    color: white;
+    border: none;
+    font-size: 10pt;
+    border-radius: 10px;
+}
+
+
+/* #note_elev_wrapper{
+    display: none;
+} */

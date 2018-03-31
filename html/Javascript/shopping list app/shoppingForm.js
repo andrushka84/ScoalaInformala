@@ -44,9 +44,7 @@ function drawCumparaturi(){
 // Creez o functie care imi sorteaza ascendent; tutorialul asta https://www.youtube.com/watch?v=PQEe9HNwCUY
 
 function sortAsc(){
-
     listaCumparaturi.sort(function(a,b) {return a.produs> b.produs;});
-   
        drawCumparaturi();
 }
 
@@ -63,7 +61,8 @@ function sortDesc() {
 // tutorialul asta  https://www.w3schools.com/jsref/prop_element_classlist.asp
 function strike(element){
 
-    if (element.parentElement.parentElement.classList.contains("strike")) {element.parentElement.parentElement.classList.remove("strike")}
+    if (element.parentElement.parentElement.classList.contains("strike")) 
+         {element.parentElement.parentElement.classList.remove("strike")}
     else {element.parentElement.parentElement.classList.add("strike")};
 
 }
