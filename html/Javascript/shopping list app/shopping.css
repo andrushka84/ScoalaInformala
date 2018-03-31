@@ -1,6 +1,6 @@
 body{
     background-color: steelblue;
-    display: flex;
+    display: grid;
 }
 
 .container{
