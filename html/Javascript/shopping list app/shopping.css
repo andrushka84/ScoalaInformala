@@ -15,6 +15,7 @@ body{
 .title{
     font-weight: bold;
     padding-left: 50px;
+    letter-spacing: 1px;
 }
 
 #casuta{
