@@ -8,12 +8,17 @@ var indexModificat=-1;
 			if(indexModificat!==-1){
 				listaNume[indexModificat]={
                 elev:document.querySelector("#casuta").value,
+                nota: document.querySelector("#nota").value,
+                medie: listaNote.reduce((a,b) => a + b, 0) / listaNote.length,
+
                 // medie: document.queryselector()....
 };
 				// indexModificat=-1;
 			}else{
 				listaNume.push({
                     elev:document.querySelector("#casuta").value,
+                    nota: document.querySelector("#nota").value,
+                    medie: listaNote.reduce((a,b) => a + b, 0) / listaNote.length,
 
                 });
                 
@@ -45,13 +50,13 @@ function drawElevi(){
 
 // Sortare ascendenta dupa medie 
 function sortAscAvg(){
-    listaNume.sort(function(a,b) {return a.medii> b.medii;});
+    listaNume.sort(function(a,b) {return a.medie> b.medie;});
        drawElevi();
 }
 
 // Sortare descendenta dupa medie 
 function sortDescAvg(){
-    listaNume.sort(function(a,b) {return a.medii< b.medii;});
+    listaNume.sort(function(a,b) {return a.medie< b.medie;});
        drawElevi();
 }
 
@@ -122,8 +127,8 @@ function see(){
 // In our reduce function we have two parameters, a and b. In this code, a is our accumulator. 
 // It will accumulate our sum as our function works. b is the current value being processed
 
-function mean(){
-    listaNume.reduce((a,b) => a + b, 0) / listaNote.length;
-    drawNote();
-}
+// function mean(){
+//     listaNote.reduce((a,b) => a + b, 0) / listaNote.length;
+//     drawNote();
+// }
 
