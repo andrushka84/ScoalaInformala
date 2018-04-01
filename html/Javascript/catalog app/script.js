@@ -1,31 +1,24 @@
-//  Fac un array gol 
-var listaElevi=[];
-var indexModificat=-1;
+    var listaElevi=[];
+    var elev ={};
+    var note =[];
+    var medie = {};
+    var indexModificat=-1;
+
+    // Functie adaugare elev
 		function addStudent(form, event){
+
             event.preventDefault();
-            var elev ={};
-            var nota =[];
-            var medie = {};
-			if(indexModificat!==-1){
-				listaElevi[indexModificat]={
-                elev:document.querySelector("#casuta").value,
-                nota: document.querySelector("#nota").value,
-                medie:nota.reduce((a,b) => a + b, 0) / nota.length,
-};
-			}else{
 				listaElevi.push({
                     elev:document.querySelector("#casuta").value,
-                    nota: document.querySelector("#nota").value,
-                    medie:nota.reduce((a,b) => a + b, 0) / nota.length,
+                    nota:note,
+                    medie:note.reduce((a,b) => a + b, 0) / nota.length,
                 });
-            }
             drawElevi();
         }
 function drawElevi(){
     var tabel=document.querySelector("#listaElevi tbody");
     var str="";
     for(var i=0;i<listaElevi.length;i++){
-        
         var rand = `<tr>
         <td>${listaElevi[i].elev}</td>
         <td>${listaElevi[i].medie}</td>
@@ -37,43 +30,20 @@ function drawElevi(){
     tabel.innerHTML=str;
 }
 
-
-// Sortare ascendenta dupa medie 
-function sortAscAvg(){
-    listaElevi.sort(function(a,b) {return a.medie> b.medie;});
-       drawElevi();
-}
-
-// Sortare descendenta dupa medie 
-function sortDescAvg(){
-    listaElevi.sort(function(a,b) {return a.medie< b.medie;});
-       drawElevi();
-}
-
-
-// *************************************************************************************************
-var indexModificat=-1;
+// Functie adaugare nota
 function addGrade(form,event) {
+
     event.preventDefault();
-    if(indexModificat!==-1){
-        				listaElevi[indexModificat]={
-                        nota:document.querySelector("#nota").value,
-        };
-        			}else{
-        				listaElevi.push({
-                        nota:document.querySelector("#nota").value,
-        
-                        });    
-                    }
-        
+    var grades = listaElevi[indexModificat].nota.push(document.querySelector("#nota").value);
+    console.log(grades);        
 drawNote();
 }
 
 function drawNote(){
     var tabel=document.querySelector("#listaElevi tbody");
     var str="";
+
     for(var i=0;i<listaElevi.length;i++){
-        
         var rand = `<tr>
         <td>${listaElevi[i].nota}</td>
         </tr>`;
@@ -114,3 +84,17 @@ function see(){
 //     drawNote();
 // }
 
+// Sortare ascendenta dupa medie 
+function sortAscAvg(){
+    listaElevi.sort(function(a,b) {return a.medie> b.medie;});
+       drawElevi();
+}
+
+// Sortare descendenta dupa medie 
+function sortDescAvg(){
+    listaElevi.sort(function(a,b) {return a.medie< b.medie;});
+       drawElevi();
+}
+
+
+// *************************************************************************************************
