@@ -1,6 +1,5 @@
-//  Fac un /array/ obiect gol 
-var listaNume={};
-
+//  Fac un array gol 
+var listaNume=[];
 // Fac functia pt adaugare de elevi
 
 var indexModificat=-1;
@@ -25,7 +24,7 @@ var indexModificat=-1;
 
 // Creez o functie care imi deseneaza tabelul cu elevi
 // var tabel=document.querySelector(".listaCumparaturi tbody") inseamna listaCumparaturi SAU tbody
-//         <td>${listaNume[i].medie}</td>
+
 
 function drawElevi(){
     var tabel=document.querySelector(".listaElevi tbody");
@@ -34,6 +33,7 @@ function drawElevi(){
         
         var rand = `<tr>
         <td>${listaNume[i].elev}</td>
+        <td>${listaNume[i].medie}</td>
         <td> <button class="grades" onclick = "see()"> Vezi notele </button> <td/>
         </tr>`;
         str +=rand;
@@ -110,7 +110,7 @@ function sortDesc(){
 
 // Ascundere note
 function hide(){
-    document.getElementById("listaNote").style.display="none"
+    document.getElementById("listaNote").style.display="none";
 }
 
 // Vezi notele !!!!!!!!!!!! DE TERMINAT
@@ -123,7 +123,7 @@ function see(){
 // It will accumulate our sum as our function works. b is the current value being processed
 
 function mean(){
-    listaNume.reduce((a,b) => a + b, 0) / listaNote.length
+    listaNume.reduce((a,b) => a + b, 0) / listaNote.length;
     drawNote();
 }
 
