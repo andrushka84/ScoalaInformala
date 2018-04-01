@@ -52,7 +52,7 @@ function sortDescAvg(){
 
 
 // *************************************************************************************************
-
+var indexModificat=-1;
 function addGrade(form,event) {
     event.preventDefault();
     if(indexModificat!==-1){
