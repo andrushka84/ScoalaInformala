@@ -1,44 +1,34 @@
 //  Fac un array gol 
-var listaNume=[];
-// Fac functia pt adaugare de elevi
-
+var listaElevi=[];
 var indexModificat=-1;
 		function addStudent(form, event){
-			event.preventDefault();
+            event.preventDefault();
+            var elev ={};
+            var nota =[];
+            var medie = {};
 			if(indexModificat!==-1){
-				listaNume[indexModificat]={
+				listaElevi[indexModificat]={
                 elev:document.querySelector("#casuta").value,
                 nota: document.querySelector("#nota").value,
-                medie: listaNote.reduce((a,b) => a + b, 0) / listaNote.length,
-
-                // medie: document.queryselector()....
+                medie:nota.reduce((a,b) => a + b, 0) / nota.length,
 };
-				// indexModificat=-1;
 			}else{
-				listaNume.push({
+				listaElevi.push({
                     elev:document.querySelector("#casuta").value,
                     nota: document.querySelector("#nota").value,
-                    medie: listaNote.reduce((a,b) => a + b, 0) / listaNote.length,
-
+                    medie:nota.reduce((a,b) => a + b, 0) / nota.length,
                 });
-                
             }
-
             drawElevi();
         }
-
-// Creez o functie care imi deseneaza tabelul cu elevi
-// var tabel=document.querySelector(".listaCumparaturi tbody") inseamna listaCumparaturi SAU tbody
-
-
 function drawElevi(){
-    var tabel=document.querySelector(".listaElevi tbody");
+    var tabel=document.querySelector("#listaElevi tbody");
     var str="";
-    for(var i=0;i<listaNume.length;i++){
+    for(var i=0;i<listaElevi.length;i++){
         
         var rand = `<tr>
-        <td>${listaNume[i].elev}</td>
-        <td>${listaNume[i].medie}</td>
+        <td>${listaElevi[i].elev}</td>
+        <td>${listaElevi[i].medie}</td>
         <td> <button class="grades" onclick = "see()"> Vezi notele </button> <td/>
         </tr>`;
         str +=rand;
@@ -50,50 +40,42 @@ function drawElevi(){
 
 // Sortare ascendenta dupa medie 
 function sortAscAvg(){
-    listaNume.sort(function(a,b) {return a.medie> b.medie;});
+    listaElevi.sort(function(a,b) {return a.medie> b.medie;});
        drawElevi();
 }
 
 // Sortare descendenta dupa medie 
 function sortDescAvg(){
-    listaNume.sort(function(a,b) {return a.medie< b.medie;});
+    listaElevi.sort(function(a,b) {return a.medie< b.medie;});
        drawElevi();
 }
 
 
 // *************************************************************************************************
 
-//  Fac un array gol 
-var listaNote=[];
-
-// Fac functia pt adaugare de note
-
-var indexModificat=-1;
-		function addGrade(form, event){
-			event.preventDefault();
-			if(indexModificat!==-1){
-				listaNote[indexModificat]={
-                nota:document.querySelector("#nota").value,
-};
-			}else{
-				listaNote.push({
-                    nota:document.querySelector("#nota").value,
-
-                });    
-            }
-
-            drawNote();
-        }
-
-// Creez o functie care imi deseneaza tabelul cu note
+function addGrade(form,event) {
+    event.preventDefault();
+    if(indexModificat!==-1){
+        				listaElevi[indexModificat]={
+                        nota:document.querySelector("#nota").value,
+        };
+        			}else{
+        				listaElevi.push({
+                        nota:document.querySelector("#nota").value,
+        
+                        });    
+                    }
+        
+drawNote();
+}
 
 function drawNote(){
-    var tabel=document.querySelector("#listaNote tbody");
+    var tabel=document.querySelector("#listaElevi tbody");
     var str="";
-    for(var i=0;i<listaNote.length;i++){
+    for(var i=0;i<listaElevi.length;i++){
         
         var rand = `<tr>
-        <td>${listaNote[i].nota}</td>
+        <td>${listaElevi[i].nota}</td>
         </tr>`;
         str +=rand;
     }
