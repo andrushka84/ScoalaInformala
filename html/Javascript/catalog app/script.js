@@ -35,8 +35,8 @@ function addGrade(form,event) {
 
     event.preventDefault();
     var grades = listaElevi[indexModificat].nota.push(document.querySelector("#nota").value);
-    console.log(grades);        
-drawNote();
+    
+    drawNote();
 }
 
 function drawNote(){
