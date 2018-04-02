@@ -1,43 +1,47 @@
     var listaElevi=[];
     var elev ={};
-    var note =[];
+    var nota =[];
     var medie = {};
     var indexModificat=-1;
 
     // Functie adaugare elev
+
+
 		function addStudent(form, event){
 
             event.preventDefault();
 				listaElevi.push({
                     elev:document.querySelector("#casuta").value,
-                    nota:note,
-                    medie:note.reduce((a,b) => a + b, 0) / nota.length,
+                    nota:nota,
+                    medie:nota.reduce((a,b) => a + b, 0) / nota.length,
                 });
             drawElevi();
         }
-function drawElevi(){
-    var tabel=document.querySelector("#listaElevi tbody");
-    var str="";
-    for(var i=0;i<listaElevi.length;i++){
-        var rand = `<tr>
-        <td>${listaElevi[i].elev}</td>
-        <td>${listaElevi[i].medie}</td>
-        <td> <button class="grades" onclick = "see()"> Vezi notele </button> <td/>
-        </tr>`;
-        str +=rand;
-    }
-    console.log(str);
-    tabel.innerHTML=str;
-}
+
+    
+        function drawElevi(){
+            var tabel=document.querySelector("#listaElevi tbody");
+            var str="";
+            for(var i=0;i<listaElevi.length;i++){
+                var rand = `<tr>
+                <td>${listaElevi[i].elev}</td>
+                <td>${listaElevi[i].medie}</td>
+                <td> <button class="grades" onclick = "show()"> Vezi notele </button> <td/>
+                </tr>`;
+                str +=rand;
+            }
+            console.log(str);
+            tabel.innerHTML=str;
+        }
 
 // Functie adaugare nota
-function addGrade(form,event) {
-
-    event.preventDefault();
-    var grades = listaElevi[indexModificat].nota.push(document.querySelector("#nota").value);
-    
-    drawNote();
-}
+        function addGrade(form,event) {
+            event.preventDefault();
+            var note = parseInt(document.querySelector("#nota").value);
+            listaElevi[indexModificat].nota.push(note);
+            
+            drawNote();
+        }
 
 function drawNote(){
     var tabel=document.querySelector("#listaElevi tbody");
@@ -71,8 +75,10 @@ function hide(){
 }
 
 // Vezi notele !!!!!!!!!!!! DE TERMINAT
-function see(){
-    document.getElementById("listaNote").style.display="block";
+function show(){
+    document.getElementById("note_elev_wrapper").style.display="block";
+    
+    drawElevi();
 }
 
 // Calculeaza media: sum(array)/array.length; tutorialul asta https://codeburst.io/javascript-arrays-finding-the-minimum-maximum-sum-average-values-f02f1b0ce332
