@@ -6,7 +6,6 @@
 
     // Functie adaugare elev
 
-
 		function addStudent(form, event){
 
             event.preventDefault();
@@ -26,7 +25,7 @@
                 var rand = `<tr>
                 <td>${listaElevi[i].elev}</td>
                 <td>${listaElevi[i].medie}</td>
-                <td> <button class="grades" onclick = "show()"> Vezi notele </button> <td/>
+                <td> <button class="grades" onclick = "show(${i})"> Vezi notele </button> <td/>
                 </tr>`;
                 str +=rand;
             }
@@ -44,12 +43,12 @@
         }
 
 function drawNote(){
-    var tabel=document.querySelector("#listaElevi tbody");
+    var tabel=document.querySelector("#listaNote tbody");
     var str="";
 
-    for(var i=0;i<listaElevi.length;i++){
+    for(var i=0;i<listaElevi[indexModificat].nota.length;i++){
         var rand = `<tr>
-        <td>${listaElevi[i].nota}</td>
+        <td>${listaElevi[indexModificat].nota[i]}</td>
         </tr>`;
         str +=rand;
     }
@@ -75,20 +74,20 @@ function hide(){
 }
 
 // Vezi notele !!!!!!!!!!!! DE TERMINAT
-function show(){
+function show(i){
     document.getElementById("note_elev_wrapper").style.display="block";
-    
-    drawElevi();
+    indexModificat = i;
+    drawNote();
 }
 
 // Calculeaza media: sum(array)/array.length; tutorialul asta https://codeburst.io/javascript-arrays-finding-the-minimum-maximum-sum-average-values-f02f1b0ce332
 // In our reduce function we have two parameters, a and b. In this code, a is our accumulator. 
 // It will accumulate our sum as our function works. b is the current value being processed
 
-// function mean(){
-//     listaNote.reduce((a,b) => a + b, 0) / listaNote.length;
-//     drawNote();
-// }
+function mean(){
+    listaNote.reduce((a,b) => a + b, 0) / listaNote.length;
+    drawNote();
+}
 
 // Sortare ascendenta dupa medie 
 function sortAscAvg(){
