@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Meniu</title>
+
+    <link rel="stylesheet" href="meniu.css">
+    <script src="meniu.js"></script>
+
+
+</head>
+<body onload="drawPreparate()">
+
+    <h1>Cald si bun</h1>
+
+    <form id="cautare" onsubmit="event.preventDefault();drawPreparate()">
+            <input type="text" placeholder="Scrie ingredientul aici" id="search" >
+            <button class="add" onclick = "drawPreparate()">Cauta in ingrediente</button>
+    </form>    
+    
+    
+     <table id="menu">
+            <thead>
+                <tr>
+                    <td class = "poza"> <img src="" alt=""></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+</body>
+</html>

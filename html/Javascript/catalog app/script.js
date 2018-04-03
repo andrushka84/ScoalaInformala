@@ -11,8 +11,8 @@
             event.preventDefault();
 				listaElevi.push({
                     elev:document.querySelector("#casuta").value,
-                    nota:nota,
-                    medie:nota.reduce((a,b) => a + b, 0) / nota.length,
+                    nota:[],
+                    medie:0,
                 });
             drawElevi();
         }
@@ -59,13 +59,17 @@ function drawNote(){
 // Sortare ascendenta dupa note
 function sortAsc(){
     listaNote.sort(function(a,b) {return a.nota> b.nota;});
+
+    // listaElevi[indexModificat].nota.sort();
        drawNote();
+       drawElevi();
 }
 
 // Sortare descendenta dupa note
 function sortDesc(){
     listaNote.sort(function(a,b) {return a.nota< b.nota;});
        drawNote();
+
 }
 
 // Ascundere note
