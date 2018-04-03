@@ -3,6 +3,7 @@
     var nota =[];
     var medie = {};
     var indexModificat=-1;
+    var i=0;
 
     // Functie adaugare elev
 
@@ -17,14 +18,14 @@
             drawElevi();
         }
 
-    
+    // Functie care deseneaza un tabel cu numele elevilor;
         function drawElevi(){
             var tabel=document.querySelector("#listaElevi tbody");
             var str="";
             for(var i=0;i<listaElevi.length;i++){
                 var rand = `<tr>
                 <td>${listaElevi[i].elev}</td>
-                <td>${listaElevi[i].medie}</td>
+                <td>${average}</td>
                 <td> <input type="button" class="grades" onclick = "show(${i})" value = "Vezi notele">   <td/>
                 </tr>`;
                 str +=rand;
@@ -42,6 +43,9 @@
             drawNote();
         }
 
+
+// Functie care deseneaza un tabel cu note
+;
 function drawNote(){
     var tabel=document.querySelector("#listaNote #bd");
     var str="";
@@ -57,19 +61,19 @@ function drawNote(){
 }
 
 // Sortare ascendenta dupa note
-function sortAsc(){
-    listaNote.sort(function(a,b) {return a.nota> b.nota;});
 
-    // listaElevi[indexModificat].nota.sort();
-       drawNote();
-       drawElevi();
+function sortAsc(i){
+    indexModificat = i;
+    listaElevi[indexModificat].nota.sort();
+    drawNote();
 }
 
 // Sortare descendenta dupa note
-function sortDesc(){
-    listaNote.sort(function(a,b) {return a.nota< b.nota;});
-       drawNote();
 
+function sortDesc(i){
+    indexModificat = i;
+    listaElevi[indexModificat].nota.reverse();
+    drawNote();
 }
 
 // Ascundere note
@@ -88,22 +92,27 @@ function show(i){
 // In our reduce function we have two parameters, a and b. In this code, a is our accumulator. 
 // It will accumulate our sum as our function works. b is the current value being processed
 
-function mean(){
-    listaNote.reduce((a,b) => a + b, 0) / listaNote.length;
-    drawNote();
-}
+
+// Functie care calculeaza media pusa intr-o variabila;
+    var average = function mean(i){
+                             indexModificat = i;
+                             listaElevi[indexModificat].nota.reduce((a,b) => a + b, 0) / listaElevi[indexModificat].nota.length;
+                             drawElevi();
+                            }
 
 // Sortare ascendenta dupa medie 
-function sortAscAvg(){
-    listaElevi.sort(function(a,b) {return a.medie> b.medie;});
-       drawElevi();
-}
+// function sortAscAvg(){
+//     listaElevi.sort(function(a,b) {return a.medie> b.medie;});
+//        drawElevi();
+// }
 
 // Sortare descendenta dupa medie 
-function sortDescAvg(){
-    listaElevi.sort(function(a,b) {return a.medie< b.medie;});
-       drawElevi();
-}
+// function sortDescAvg(){
+//     listaElevi.sort(function(a,b) {return a.medie< b.medie;});
+//        drawElevi();
+// }
 
 
 // *************************************************************************************************
+
+

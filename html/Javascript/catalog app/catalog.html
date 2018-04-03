@@ -62,14 +62,12 @@
                 
                     <button id="grd" class="btn" onclick="addGrade(form, event)">Adauga nota</button> <br/>
  
-            <button class="sort" onclick="sortAsc()">
-                        Sorteaza ascendent notele
-                    </button>
-                    
-                    <button class="sort" onclick="sortDesc()">
-                        Sorteaza descendent notele
-                    </button>
+            <input type="button" class="sort" onclick="sortAsc(i)" value="Sorteaza ascendent notele">
+            
+            <input type="button" class="sort" onclick="sortDesc(i)" value="Sorteaza descendent notele">
         
+                    
+                   
                     <table id="listaNote" >
                             <thead> <tr>
                                         <th class="theader">Nota</th>
