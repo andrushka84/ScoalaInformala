@@ -37,7 +37,7 @@
         function addGrade(form,event) {
             event.preventDefault();
             var note = parseInt(document.querySelector("#nota").value);
-            listaElevi[indexModificat].nota.push(note);
+            var marks =listaElevi[indexModificat].nota.push(note);
             
             drawNote();
         }
@@ -73,7 +73,7 @@ function hide(){
     document.getElementById("note_elev_wrapper").style.display="none";
 }
 
-// Vezi notele !!!!!!!!!!!! DE TERMINAT
+// Vezi notele 
 function show(i){
     document.getElementById("note_elev_wrapper").style.display="block";
     indexModificat = i;
