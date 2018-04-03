@@ -37,7 +37,7 @@
         function addGrade(form,event) {
             event.preventDefault();
             var note = parseInt(document.querySelector("#nota").value);
-            var marks =listaElevi[indexModificat].nota.push(note);
+            listaElevi[indexModificat].nota.push(note);
             
             drawNote();
         }
