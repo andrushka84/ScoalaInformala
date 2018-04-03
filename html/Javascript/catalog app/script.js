@@ -43,7 +43,7 @@
         }
 
 function drawNote(){
-    var tabel=document.querySelector("#listaNote tbody");
+    var tabel=document.querySelector("#listaNote #bd");
     var str="";
 
     for(var i=0;i<listaElevi[indexModificat].nota.length;i++){
