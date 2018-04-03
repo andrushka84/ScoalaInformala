@@ -25,7 +25,7 @@
                 var rand = `<tr>
                 <td>${listaElevi[i].elev}</td>
                 <td>${listaElevi[i].medie}</td>
-                <td> <input type="button" class="grades" onsubmit = "show(${i})" value = "Vezi notele">   <td/>
+                <td> <input type="button" class="grades" onclick = "show(${i})" value = "Vezi notele">   <td/>
                 </tr>`;
                 str +=rand;
             }
