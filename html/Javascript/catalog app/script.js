@@ -70,7 +70,7 @@ function sortDesc(){
 
 // Ascundere note
 function hide(){
-    document.getElementById("listaNote").style.display="none";
+    document.getElementById("note_elev_wrapper").style.display="none";
 }
 
 // Vezi notele !!!!!!!!!!!! DE TERMINAT
