@@ -101,8 +101,6 @@ function ascunde() {
 
 }
 
-
-
 // Vezi notele 
 function show(i) {
     document.getElementById("note_elev_wrapper").style.display = "block";
