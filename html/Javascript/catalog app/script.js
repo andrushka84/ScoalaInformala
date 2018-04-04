@@ -86,7 +86,6 @@ function sortAsc() {
 // Sortare descendenta dupa note
 
 function sortDesc() {
-    indexModificat =i;
 
     listaElevi[indexModificat].nota.sort(function(a, b) {
         return b - a;
