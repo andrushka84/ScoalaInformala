@@ -25,7 +25,7 @@
             for(var i=0;i<listaElevi.length;i++){
                 var rand = `<tr>
                 <td>${listaElevi[i].elev}</td>
-                <td>${average}</td>
+                <td>${listaElevi[i].medie}</td>
                 <td> <input type="button" class="grades" onclick = "show(${i})" value = "Vezi notele">   <td/>
                 </tr>`;
                 str +=rand;
@@ -40,6 +40,10 @@
             var note = parseInt(document.querySelector("#nota").value);
             listaElevi[indexModificat].nota.push(note);
             
+            var medie = listaElevi[indexModificat].nota.reduce((a,b) => a + b, 0) / listaElevi[indexModificat].nota.length;
+            listaElevi[indexModificat].nota.push(medie);
+
+            drawElevi();
             drawNote();
         }
 
