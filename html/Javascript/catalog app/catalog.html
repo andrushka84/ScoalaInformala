@@ -25,7 +25,6 @@
 
                         <label for="casuta" class="ab">Nume:</label>
                         <input type="text" id="casuta" placeholder="Scrie numele aici" class="input">
-                        <br/>
 
                         <button id="elev" class="btn" onclick="addStudent(form, event)">Adauga elev</button>
                         <br/>
@@ -58,7 +57,8 @@
 
 
         <div id="note_elev_wrapper" style="display:none">
-               
+
+               <h1>Nota elev <span id="titlu">nume</span> </h1>
 
                 <form class="elevi">
 
@@ -67,9 +67,10 @@
 
                         
                         <input type="text" id="nota" placeholder="Scrie nota aici" class="input"> 
-                        <!-- <input type="button" class="btn" id="grd" onclick="addGrade(form, event)" value ="Adauga nota"/> -->
                         <button id="grd" class="btn" onclick="addGrade(form, event)">Adauga nota</button>
-                        <button id="hide" class="btn" onclick="hide()">Ascunde notele</button> <br/>
+                       
+                        <input type="button" id="hide" class="btn" onclick="hide(this)" value="Ascunde notele"> <br/>
+                        <!-- <button id="hide" class="btn" onclick="hide(element)">Ascunde notele</button> <br/> -->
 
 
                         <br/>

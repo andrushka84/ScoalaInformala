@@ -48,7 +48,6 @@ body{
 }
 
 #note_elev_wrapper{
-    margin-top: 50px;
     border: none;
     background-color:rgb(121, 197, 223);
 }
@@ -60,8 +59,13 @@ body{
 
 #listaElevi, #listaNote{
     margin-left: 10px;
+
 }
 
-form{
-    padding: 20px;
+.hide{
+    display: none;
 }
+/* form{
+    padding: 20px;
+} */
+
