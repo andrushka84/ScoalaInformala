@@ -58,9 +58,10 @@
 
         <div id="note_elev_wrapper" style="display:none">
 
-               <h1>Nota elev <span id="titlu">nume</span> </h1>
 
                 <form class="elevi">
+
+                        <h1>Nota elev <span id="titlu">nume</span> </h1>
 
                         
                         <label for="nota" class="ab">Nota:</label>
@@ -69,17 +70,16 @@
                         <input type="text" id="nota" placeholder="Scrie nota aici" class="input"> 
                         <button id="grd" class="btn" onclick="addGrade(form, event)">Adauga nota</button>
                        
-                        <input type="button" id="hide" class="btn" onclick="hide(this)" value="Ascunde notele"> <br/>
-                        <!-- <button id="hide" class="btn" onclick="hide(element)">Ascunde notele</button> <br/> -->
+                        <input type="button" id="hide" class="btn" onclick="ascunde()" value="Ascunde notele"> <br/>
 
 
                         <br/>
 
                         <br/>
 
-                        <input type="button" class="sort" onclick="sortAsc(i)" value="Sorteaza ascendent notele">
+                        <input type="button" class="sort" onclick="sortAsc()" value="Sorteaza ascendent notele">
 
-                        <input type="button" class="sort" onclick="sortDesc(i)" value="Sorteaza descendent notele">
+                        <input type="button" class="sort" onclick="sortDesc()" value="Sorteaza descendent notele">
 
 
 

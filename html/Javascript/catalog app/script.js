@@ -49,7 +49,7 @@ function addGrade(form, event) {
     var medie = listaElevi[indexModificat].nota.reduce((a, b) => a + b, 0) / listaElevi[indexModificat].nota.length;
     listaElevi[indexModificat].medie = medie.toFixed(2);
 
-    // Pun asta aici ca sa pun numele elevului in titlu
+    // Pun asta aici ca sa puna numele elevului in titlu
     var nume = listaElevi[indexModificat].elev;
     document.getElementById("titlu").innerHTML = nume;
 
@@ -76,8 +76,7 @@ function drawNote() {
 
 // Sortare ascendenta dupa note
 
-function sortAsc(i) {
-    indexModificat =i;
+function sortAsc() {
     listaElevi[indexModificat].nota.sort(function(a, b) {
         return a - b;
       });
@@ -86,7 +85,7 @@ function sortAsc(i) {
 
 // Sortare descendenta dupa note
 
-function sortDesc(i) {
+function sortDesc() {
     indexModificat =i;
 
     listaElevi[indexModificat].nota.sort(function(a, b) {
@@ -97,13 +96,12 @@ function sortDesc(i) {
 }
 
 // Ascundere note
+function ascunde() {
+    document.getElementById("note_elev_wrapper").style.display = "none";
+    drawElevi();
 
-// function hide() {
-//     document.getElementById("note_elev_wrapper").style.display = "none";s
-//     drawNote();
-//     drawElevi();
+}
 
-// }
 
 
 // Vezi notele 
@@ -126,15 +124,6 @@ function sortDescAvg() {
     drawElevi();
 }
 
-
-// Ascundere note
-
-function hide(element) {
-    if (element.parentElement.parentElement.classList.contains("hide")) 
-    {element.parentElement.parentElement.classList.remove("hide")}
-    else {element.parentElement.parentElement.classList.add("hide")};
-
-}
 
 
 
