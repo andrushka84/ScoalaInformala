@@ -1,78 +1,77 @@
-    var listaElevi=[];
-    var elev ={};
-    var nota =[];
-    var medie = {};
-    var indexModificat=-1;
-    var i=0;
+var listaElevi = [];
+var elev = {};
+var nota = [];
+var medie = {};
+var indexModificat = -1;
+var i = 0;
 
-    // Functie adaugare elev
+// Functie adaugare elev
 
-		function addStudent(form, event){
+function addStudent(form, event) {
 
-            event.preventDefault();
-				listaElevi.push({
-                    elev:document.querySelector("#casuta").value,
-                    nota:[],
-                    medie:0,
-                });
-            drawElevi();
-        }
+    event.preventDefault();
+    listaElevi.push({
+        elev: document.querySelector("#casuta").value,
+        nota: [],
+        medie: 0,
+    });
+    drawElevi();
+}
 
-    // Functie care deseneaza un tabel cu numele elevilor;
-        function drawElevi(){
-            var tabel=document.querySelector("#listaElevi tbody");
-            var str="";
-            for(var i=0;i<listaElevi.length;i++){
-                var rand = `<tr>
+// Functie care deseneaza un tabel cu numele elevilor;
+function drawElevi() {
+    var tabel = document.querySelector("#listaElevi tbody");
+    var str = "";
+    for (var i = 0; i < listaElevi.length; i++) {
+        var rand = `<tr>
                 <td>${listaElevi[i].elev}</td>
                 <td>${listaElevi[i].medie}</td>
                 <td> <input type="button" class="grades" onclick = "show(${i})" value = "Vezi notele">   <td/>
                 </tr>`;
-                str +=rand;
-            }
-            console.log(str);
-            tabel.innerHTML=str;
-        }
+        str += rand;
+    }
+    console.log(str);
+    tabel.innerHTML = str;
+}
 
 // Functie adaugare nota
-        function addGrade(form,event) {
-            event.preventDefault();
-            var note = parseInt(document.querySelector("#nota").value);
-            listaElevi[indexModificat].nota.push(note);
-            // adaug si media in functia de adaugare note
-            // Calculeaza media: sum(array)/array.length; tutorialul asta https://codeburst.io/javascript-arrays-finding-the-minimum-maximum-sum-average-values-f02f1b0ce332
-            // In our reduce function we have two parameters, a and b. In this code, a is our accumulator. 
-            // It will accumulate our sum as our function works. b is the current value being processed
+function addGrade(form, event) {
+    event.preventDefault();
+    var note = parseInt(document.querySelector("#nota").value);
+    listaElevi[indexModificat].nota.push(note);
+    // adaug si media in functia de adaugare note
+    // Calculeaza media: sum(array)/array.length; tutorialul asta https://codeburst.io/javascript-arrays-finding-the-minimum-maximum-sum-average-values-f02f1b0ce332
+    // In our reduce function we have two parameters, a and b. In this code, a is our accumulator. 
+    // It will accumulate our sum as our function works. b is the current value being processed
 
-            var medie = listaElevi[indexModificat].nota.reduce((a,b) => a + b, 0) / listaElevi[indexModificat].nota.length;
-            listaElevi[indexModificat].medie = medie.toFixed(2);
+    var medie = listaElevi[indexModificat].nota.reduce((a, b) => a + b, 0) / listaElevi[indexModificat].nota.length;
+    listaElevi[indexModificat].medie = medie.toFixed(2);
 
 
-            drawNote();
-            drawElevi();
+    drawNote();
+    drawElevi();
 
-        }
+}
 
 
 // Functie care deseneaza un tabel cu note
-;
-function drawNote(){
-    var tabel=document.querySelector("#listaNote #bd");
-    var str="";
+function drawNote() {
+    var tabel = document.querySelector("#listaNote #bd");
+    var str = "";
 
-    for(var i=0;i<listaElevi[indexModificat].nota.length;i++){
+    for (var i = 0; i < listaElevi[indexModificat].nota.length; i++) {
         var rand = `<tr>
         <td>${listaElevi[indexModificat].nota[i]}</td>
         </tr>`;
-        str +=rand;
+        str += rand;
     }
     console.log(str);
-    tabel.innerHTML=str;
+    tabel.innerHTML = str;
 }
 
 // Sortare ascendenta dupa note
 
-function sortAsc(i){
+function sortAsc(i) {
     indexModificat = i;
     listaElevi[indexModificat].nota.sort();
     drawNote();
@@ -80,33 +79,33 @@ function sortAsc(i){
 
 // Sortare descendenta dupa note
 
-function sortDesc(i){
+function sortDesc(i) {
     indexModificat = i;
     listaElevi[indexModificat].nota.reverse();
     drawNote();
 }
 
 // Ascundere note
-function hide(){
-    document.getElementById("note_elev_wrapper").style.display="none";
+function hide() {
+    document.getElementById("note_elev_wrapper").style.display = "none";
 }
 
 // Vezi notele 
-function show(i){
-    document.getElementById("note_elev_wrapper").style.display="block";
+function show(i) {
+    document.getElementById("note_elev_wrapper").style.display = "block";
     indexModificat = i;
     drawNote();
 }
 
 // Sortare ascendenta dupa medie 
-function sortAscAvg(){
+function sortAscAvg() {
 
     listaElevi.sort()
     drawElevi();
 }
 // Sortare descendenta dupa medie 
-function sortDescAvg(){
-    
+function sortDescAvg() {
+
     listaElevi.reverse();
     drawElevi();
 }

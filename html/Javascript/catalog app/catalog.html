@@ -1,90 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    
-    <title>Catalog note</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+
+        <title>Catalog note</title>
 </head>
+
 <body>
-    
-
-<div id="lista_elevi_wrapper">
-
-<div class="title">
-        <p><h1>Lista elevi</h1></p>
-</div>
 
 
-<form class="elevi">
+        <div id="lista_elevi_wrapper">
 
-        <label for="casuta" class="ab">Nume:</label>
-        <input type="text" id="casuta" placeholder="Scrie numele aici" class="input"> <br/>
-                
-        <button id="elev" class="btn" onclick="addStudent(form, event)">Adauga elev</button> <br/>
-        
-        <input type ="button" class="sort" onclick="sortAscAvg()" value="Sorteaza ascendent dupa medii">
-        <input type ="button" class="sort" onclick="sortDescAvg()" value="Sorteaza descendent dupa medii">
+                <div class="title">
+                        <p>
+                                <h1>Lista elevi</h1>
+                        </p>
+                </div>
 
-       
-        
-        <table id="listaElevi">
-                <thead> <tr>
-                            <th class="theader">Nume</th>
-                            <th class="theader">Medie note</th>    
-                            <th class="theader"></th>
-                        </tr>
-                </thead>
-                    
-                <tbody>
-        
-                </tbody>
-        
-                </table>
-        
 
-            </form>
+                <form class="elevi">
+
+                        <label for="casuta" class="ab">Nume:</label>
+                        <input type="text" id="casuta" placeholder="Scrie numele aici" class="input">
+                        <br/>
+
+                        <button id="elev" class="btn" onclick="addStudent(form, event)">Adauga elev</button>
+                        <br/>
+
+                        <input type="button" class="sort" onclick="sortAscAvg()" value="Sorteaza ascendent dupa medii">
+                        <input type="button" class="sort" onclick="sortDescAvg()" value="Sorteaza descendent dupa medii">
+
+
+
+                        <table id="listaElevi">
+                                <thead>
+                                        <tr>
+                                                <th class="theader">Nume</th>
+                                                <th class="theader">Medie note</th>
+                                                <th class="theader"></th>
+                                        </tr>
+                                </thead>
+
+                                <tbody>
+
+                                </tbody>
+
+                        </table>
+
+
+                </form>
 
         </div>
 
 
         <div id="note_elev_wrapper" style="display:none">
-            <button id="hide" class="btn" onclick="hide()">Ascunde notele</button>
-        
-            <form class="elevi">
-                    <label for="nota" class="ab">Nota:</label>
-                    <input type="text" id="nota" placeholder="Scrie nota aici" class="input"> <br/>
-                
-                    <button id="grd" class="btn" onclick="addGrade(form, event)">Adauga nota</button> <br/>
- 
-            <input type="button" class="sort" onclick="sortAsc(i)" value="Sorteaza ascendent notele">
-            
-            <input type="button" class="sort" onclick="sortDesc(i)" value="Sorteaza descendent notele">
-        
-                    
-                   
-                    <table id="listaNote" >
-                            <thead> <tr>
-                                        <th class="theader">Nota</th>
-                                       
-                                    </tr>
-                            </thead>
-                                
-                            <tbody id="bd">
-                    
-                            </tbody>
-                    
-                    </table>
+                <button id="hide" class="btn" onclick="hide()">Ascunde notele</button>
 
-            </form>
+                <form class="elevi">
+                        <label for="nota" class="ab">Nota:</label>
+                        <input type="text" id="nota" placeholder="Scrie nota aici" class="input">
+                        <br/>
+
+                        <button id="grd" class="btn" onclick="addGrade(form, event)">Adauga nota</button>
+                        <br/>
+
+                        <input type="button" class="sort" onclick="sortAsc(i)" value="Sorteaza ascendent notele">
+
+                        <input type="button" class="sort" onclick="sortDesc(i)" value="Sorteaza descendent notele">
 
 
 
+                        <table id="listaNote">
+                                <thead>
+                                        <tr>
+                                                <th class="theader">Nota</th>
+
+                                        </tr>
+                                </thead>
+
+                                <tbody id="bd">
+
+                                </tbody>
+
+                        </table>
+
+                </form>
 
 
-</div>   
+
+
+
+        </div>
 
 
 </body>
+
 </html>
