@@ -104,7 +104,7 @@ function sortAscAvg(){
 
     listaElevi.sort()
     drawElevi();
-
+}
 // Sortare descendenta dupa medie 
 function sortDescAvg(i){
     
@@ -115,4 +115,4 @@ function sortDescAvg(i){
 
 // *************************************************************************************************
 
-}
+
