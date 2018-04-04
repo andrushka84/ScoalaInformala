@@ -61,3 +61,7 @@ body{
 #listaElevi, #listaNote{
     margin-left: 10px;
 }
+
+form{
+    padding: 20px;
+}
