@@ -41,10 +41,12 @@
             listaElevi[indexModificat].nota.push(note);
             
             var medie = listaElevi[indexModificat].nota.reduce((a,b) => a + b, 0) / listaElevi[indexModificat].nota.length;
-            listaElevi[indexModificat].nota.push(medie);
+            listaElevi[indexModificat].medie = medie.toFixed(2);
 
-            drawElevi();
+
             drawNote();
+            drawElevi();
+
         }
 
 
