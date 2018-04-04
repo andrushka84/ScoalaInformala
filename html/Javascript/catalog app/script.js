@@ -106,7 +106,7 @@ function sortAscAvg(){
     drawElevi();
 }
 // Sortare descendenta dupa medie 
-function sortDescAvg(i){
+function sortDescAvg(){
     
     listaElevi.reverse();
     drawElevi();
