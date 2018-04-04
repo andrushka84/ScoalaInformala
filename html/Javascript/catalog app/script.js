@@ -39,7 +39,6 @@ function addGrade(form, event) {
     event.preventDefault();
     var note = parseInt(document.querySelector("#nota").value);
     listaElevi[indexModificat].nota.push(note);
-
     drawNote();
 
     // adaug si media in functia de adaugare note
