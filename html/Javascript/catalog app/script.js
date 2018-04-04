@@ -98,7 +98,6 @@ function show(i){
     drawNote();
 }
 
-
 // Sortare ascendenta dupa medie 
 function sortAscAvg(){
 
