@@ -39,16 +39,17 @@ function addGrade(form, event) {
     event.preventDefault();
     var note = parseInt(document.querySelector("#nota").value);
     listaElevi[indexModificat].nota.push(note);
+
+    drawNote();
+
     // adaug si media in functia de adaugare note
     // Calculeaza media: sum(array)/array.length; tutorialul asta https://codeburst.io/javascript-arrays-finding-the-minimum-maximum-sum-average-values-f02f1b0ce332
     // In our reduce function we have two parameters, a and b. In this code, a is our accumulator. 
     // It will accumulate our sum as our function works. b is the current value being processed
-
+    
     var medie = listaElevi[indexModificat].nota.reduce((a, b) => a + b, 0) / listaElevi[indexModificat].nota.length;
     listaElevi[indexModificat].medie = medie.toFixed(2);
 
-
-    drawNote();
     drawElevi();
 
 }
