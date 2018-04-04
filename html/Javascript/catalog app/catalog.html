@@ -29,6 +29,7 @@
 
                         <button id="elev" class="btn" onclick="addStudent(form, event)">Adauga elev</button>
                         <br/>
+                        <br/>
 
                         <input type="button" class="sort" onclick="sortAscAvg()" value="Sorteaza ascendent dupa medii">
                         <input type="button" class="sort" onclick="sortDescAvg()" value="Sorteaza descendent dupa medii">
@@ -57,14 +58,19 @@
 
 
         <div id="note_elev_wrapper" style="display:none">
-                <button id="hide" class="btn" onclick="hide()">Ascunde notele</button>
+               
 
                 <form class="elevi">
+
+                        
                         <label for="nota" class="ab">Nota:</label>
                         <input type="text" id="nota" placeholder="Scrie nota aici" class="input">
+
+                        <button id="grd" class="btn" onclick="addGrade(form, event)" >Adauga nota</button>
+
+                        <button id="hide" class="btn" onclick="hide()">Ascunde notele</button>
                         <br/>
 
-                        <button id="grd" class="btn" onclick="addGrade(form, event)">Adauga nota</button>
                         <br/>
 
                         <input type="button" class="sort" onclick="sortAsc(i)" value="Sorteaza ascendent notele">

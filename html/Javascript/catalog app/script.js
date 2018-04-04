@@ -73,7 +73,9 @@ function drawNote() {
 
 function sortAsc(i) {
     indexModificat = i;
+    
     listaElevi[indexModificat].nota.sort();
+    // listaElevi[indexModificat].nota.sort((function(a,b) {return a.nota-b.nota}));
     drawNote();
 }
 
@@ -82,6 +84,8 @@ function sortAsc(i) {
 function sortDesc(i) {
     indexModificat = i;
     listaElevi[indexModificat].nota.reverse();
+    // listaElevi[indexModificat].nota.sort((function(a,b) {return b.nota-a.nota}));
+
     drawNote();
 }
 
@@ -100,13 +104,13 @@ function show(i) {
 // Sortare ascendenta dupa medie 
 function sortAscAvg() {
 
-    listaElevi.sort()
+    listaElevi.sort(function(a,b) {return a.medie-b.medie})
     drawElevi();
 }
 // Sortare descendenta dupa medie 
 function sortDescAvg() {
 
-    listaElevi.reverse();
+    listaElevi.sort(function(a,b) {return b.medie-a.medie})
     drawElevi();
 }
 
