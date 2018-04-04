@@ -39,7 +39,11 @@
             event.preventDefault();
             var note = parseInt(document.querySelector("#nota").value);
             listaElevi[indexModificat].nota.push(note);
-            
+            // adaug si media in functia de adaugare note
+            // Calculeaza media: sum(array)/array.length; tutorialul asta https://codeburst.io/javascript-arrays-finding-the-minimum-maximum-sum-average-values-f02f1b0ce332
+            // In our reduce function we have two parameters, a and b. In this code, a is our accumulator. 
+            // It will accumulate our sum as our function works. b is the current value being processed
+
             var medie = listaElevi[indexModificat].nota.reduce((a,b) => a + b, 0) / listaElevi[indexModificat].nota.length;
             listaElevi[indexModificat].medie = medie.toFixed(2);
 
@@ -94,31 +98,21 @@ function show(i){
     drawNote();
 }
 
-// Calculeaza media: sum(array)/array.length; tutorialul asta https://codeburst.io/javascript-arrays-finding-the-minimum-maximum-sum-average-values-f02f1b0ce332
-// In our reduce function we have two parameters, a and b. In this code, a is our accumulator. 
-// It will accumulate our sum as our function works. b is the current value being processed
-
-
-// Functie care calculeaza media pusa intr-o variabila;
-    var average = function mean(i){
-                             indexModificat = i;
-                             listaElevi[indexModificat].nota.reduce((a,b) => a + b, 0) / listaElevi[indexModificat].nota.length;
-                             drawElevi();
-                            }
 
 // Sortare ascendenta dupa medie 
-// function sortAscAvg(){
-//     listaElevi.sort(function(a,b) {return a.medie> b.medie;});
-//        drawElevi();
-// }
+function sortAscAvg(){
+
+    listaElevi.sort()
+    drawElevi();
 
 // Sortare descendenta dupa medie 
-// function sortDescAvg(){
-//     listaElevi.sort(function(a,b) {return a.medie< b.medie;});
-//        drawElevi();
-// }
+function sortDescAvg(i){
+    
+    listaElevi.reverse();
+    drawElevi();
+}
 
 
 // *************************************************************************************************
 
-
+}

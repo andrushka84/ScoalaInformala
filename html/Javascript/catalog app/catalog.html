@@ -23,15 +23,11 @@
         <input type="text" id="casuta" placeholder="Scrie numele aici" class="input"> <br/>
                 
         <button id="elev" class="btn" onclick="addStudent(form, event)">Adauga elev</button> <br/>
-        <button class="sort">
-            Sorteaza ascendent dupa medii
-        </button>
         
-        <button class="sort">
-            Sorteaza descendent dupa medii
-        </button>
-        
-    
+        <input type ="button" class="sort" onclick="sortAscAvg()" value="Sorteaza ascendent dupa medii">
+        <input type ="button" class="sort" onclick="sortDescAvg()" value="Sorteaza descendent dupa medii">
+
+       
         
         <table id="listaElevi">
                 <thead> <tr>
