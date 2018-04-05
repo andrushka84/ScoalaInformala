@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="contact.css">
+    <style>
+       #map {
+        height: 250px;
+        width: 250px;
+       }
+    </style>
+    <title>Contact us</title>
+  </head>
+  <body>
+    <h3>Ne gasiti aici</h3>
+    <img id="arrow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Simpleicons_Interface_arrow-pointing-to-right.svg/768px-Simpleicons_Interface_arrow-pointing-to-right.svg.png" alt="">
+     <span>Adresa: Bulevardul Dimitrie Cantemir 2, București 030167 </span>
+    
+    <br/>
+
+
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 44.425483, lng: 26.103764};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKT2DEeWuPMdk3NrII9mmX34amEkozNg8&callback=initMap">
+    </script>
+
+
+    <span id="pofta">POFTA BUNA! </span> 
+    <img src="https://www.smileysapp.com/emojis/hungry-smiley.png" alt="Emoticon with a fork and a knife"> 
+
+  </body>
+</html>

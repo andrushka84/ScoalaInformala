@@ -11,7 +11,9 @@ function drawPreparate(){
 			var str="";
 			for(var i in listaPreparate.menu){
 
-				if (document.getElementById("search").value!==''&& listaPreparate.menu[i].ingrediente.indexOf(document.getElementById("search").value)===-1){
+				if (document.getElementById("search").value!==''&& 
+				listaPreparate.menu[i].ingrediente.indexOf(document.getElementById("search").value)===-1)
+				{
 									continue;
 	
 				}
