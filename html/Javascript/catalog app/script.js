@@ -50,11 +50,11 @@ function addGrade(form, event) {
     listaElevi[indexModificat].medie = medie.toFixed(2);
 
     // Pun asta aici ca sa puna numele elevului in titlu
-    var nume = listaElevi[indexModificat].elev;
-    document.getElementById("titlu").innerHTML = nume;
+    // var nume = listaElevi[indexModificat].elev;
+    // document.getElementById("titlu").innerHTML = nume;
 
 
-    drawElevi();
+    // drawElevi();
 
 }
 
@@ -106,6 +106,13 @@ function show(i) {
     document.getElementById("note_elev_wrapper").style.display = "block";
     indexModificat = i;
     drawNote();
+
+    // Pun asta aici ca sa puna numele elevului in titlu
+    var nume = listaElevi[indexModificat].elev;
+    document.getElementById("titlu").innerHTML = nume;
+
+
+    drawElevi();
 }
 
 // Sortare ascendenta dupa medie 

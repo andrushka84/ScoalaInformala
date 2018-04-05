@@ -21,7 +21,7 @@ function drawPreparate(){
 				var rand = `<tr>
 					<td><img src="${listaPreparate.menu[i].imagine}"></td>
 					<td>${listaPreparate.menu[i].nume} <br/> ${listaPreparate.menu[i].ingrediente}</td>
-					<td><a class="detalii" href="details.html?id=${i}">DETALII</a></td>
+					<td><a class="detalii" href="detalii.html?id=${i}">DETALII</a></td>
 					
 				</tr>`;
 				str +=rand;
