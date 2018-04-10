@@ -1,0 +1,54 @@
+
+ a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+ }
+
+ 
+ img{
+    width: 350px;
+    height: 350px; 
+    border-style: groove;
+    border-color: teal;
+    margin: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+#preparat{
+    font-weight: bold;
+    font-kerning: normal;
+}
+
+#ingrediente{
+    font-size: 10pt;
+    font-kerning: normal;
+    font-style: italic;
+    text-align: justify;
+}
+
+#reteta {
+    color: #0a8006;
+    font-size: 10pt;
+    font-kerning: normal;
+    text-align: justify;
+}
+
+
+.contact{
+    border:none;
+    background-color: rgb(43, 144, 226);
+    border-radius: 5px;
+    width: 100px;
+    float: right;
+   }
+
+.menu{
+   border:none;
+    border-radius: 5px;
+    width: 100px;
+    background-color: rgb(6, 53, 14);
+    float: right;
+
+   }

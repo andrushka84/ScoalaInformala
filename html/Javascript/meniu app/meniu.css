@@ -1,0 +1,69 @@
+.contact{
+    background-color: rgb(43, 144, 226);
+    border:none;
+    border-radius: 5px;
+    width: 100px;
+    float: right;
+    height: 22px;
+   }
+
+h1{
+    font-family: "Tangerine";
+    font-size: 28pt;
+    fill: url(ornaments.svg);
+
+}
+
+
+   a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+   }
+
+
+.add{
+    border:none;
+    border-radius: 5px;
+    width: 200px;
+    height: 22px;
+    color: rgb(255, 255, 255);;
+    background: rebeccapurple;
+   }
+
+img{
+    width: 100px;
+    height: 100px; 
+    border-style: groove;
+    border-color: teal;
+    margin: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nume{
+       font-weight: bold;
+       font-kerning: normal;
+   }
+
+.ingrediente{
+       font-size: 10pt;
+       font-kerning: normal;
+       font-style: italic;
+   }
+
+  #menu{
+      border: none;
+  }
+
+  .detalii{
+      border: none;
+      color: white;
+      background-color:#096c31;   
+      border-radius: 5px;
+      font-family: Cinzel;
+  }
+
+  ::placeholder{
+      font-family: Good Vibes;
+      font-size: 12pt;
+  }
