@@ -10,5 +10,46 @@
 </head>
 <body>
     
+    <div id="wrapper">
+
+        <form id="adauga">
+            <!-- nume, url imagine, ingrediente, mod de preparare -->
+    
+            <label for="name"></label> <br/>
+            <input type="text" class = "input" name="adaugare" id="name" placeholder="Scrie numele preparatului aici"> <br/>
+    
+            <label for="site"></label> <br/>
+            <input type="text" class ="input" name="adaugare" id="site" placeholder="Scrie URL-ul fotografiei aici"> <br/>
+    
+            <label for="ingredients"></label> <br/>
+            <textarea name="adaugare" class="input" cols="1" rows="1" id="ingredients" placeholder="Scrie ingredientele aici"></textarea>
+    
+            <label for="how"></label> <br/>
+            <textarea name="adaugare" class="input" cols="1" rows="1" id="how" placeholder="Scrie modul de preparare aici"></textarea>
+    
+            <input type="button" value="SALVEAZA PREPARAT" id="save" onclick="modificaPreparat(form,event)">
+    
+    
+        </form>
+    
+    
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
