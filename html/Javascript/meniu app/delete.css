@@ -1,0 +1,17 @@
+button{
+    color: white;
+    margin-right: 5px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#yes{
+    background-color: red;
+
+}
+
+#no{
+    background-color: green;
+    
+}

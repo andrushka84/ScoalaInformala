@@ -12,6 +12,11 @@
 
 }
 
+form{
+    width: 350px;
+    
+
+}
 
 label{
  font-size: 10pt;
@@ -25,19 +30,27 @@ label{
     background-color:red;
     border: none;
     border-radius: 10px;
-    height: 20px;
-    width: 100px;
+    height: 35px;
+    width: 200px;
+    font-kerning: normal;
+    word-spacing: 1px;
     /* justify-content: center; */
 
     
 }
 
-.input{
+/* .input{
     width: 200px;
 
-}
+} */
 
 placeholder{
     font-size: 10pt;
+}
+
+#name, #site, #ingredients, #how{
+    width: 200px;
+    justify-content: center;
+    border: none;
 }
 

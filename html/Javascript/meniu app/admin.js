@@ -1,6 +1,5 @@
-var listaPreparate={};
-var index= 0;
-var indexModificat=-1;
+
+var listaPreparate=[];
 
 function drawPreparateAdmin(){
 	var xhttp = new XMLHttpRequest();
@@ -12,13 +11,14 @@ function drawPreparateAdmin(){
 
 			var tabel=document.querySelector("#preparate tbody");
 			var str="";
-			for(var i in listaPreparate){
+			for(var i=0; i<listaPreparate.length; i++){
 
 				var rand = `<tr>
 					<td><img src="${listaPreparate[i].imagine}"></td>
-					<td>${listaPreparate[i].nume} <br/> ${listaPreparate[i].ingrediente}</td>
-					<td><button> <a href="edit.html" onclick="modifica(${i})">Modifica</a></button></td>
-					<td><button><a href="delete.html" onclick="sterge(${i})">Sterge</a></button></td>
+					<td> <span id = "fel">${listaPreparate[i].nume}</span> <br/> 
+					<span id= "ing"> ${listaPreparate[i].ingrediente}</span></td>
+					<td><button class="btn1"> <a href="edit.html?id=${i}">Modifica</a></button></td>
+					<td><button id="btn2"><a href="delete.html?id=${i}">Sterge</a></button></td>
 				</tr>`;
 				str +=rand;
 			}
@@ -26,8 +26,9 @@ function drawPreparateAdmin(){
 			tabel.innerHTML=str;
 		}
 	};
-	xhttp.open("GET", "https://menu-83f09.firebaseio.com/.json", true);
+	xhttp.open("GET", "https://menu-83f09.firebaseio.com/menu/.json", true);
 	xhttp.send();
 
 }
+
 

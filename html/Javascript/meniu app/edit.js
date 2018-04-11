@@ -1,17 +1,16 @@
 var listaPreparate=[];
 
-function adaugaPreparat(form, event){
+function modificaPreparat(form, event){
     event.preventDefault();
-    
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 drawPreparateAdmin();
             }
         };
-        // ***********************************************************************
-        
-        xhttp.open("POST", "https://menu-83f09.firebaseio.com/menu/.json", true);
+        var id =window.location.search.substring(4);
+
+        xhttp.open("PUT", "https://menu-83f09.firebaseio.com/menu/" + id + ".json", true);
         xhttp.send(JSON.stringify({
             nume: form.querySelector("#name").value,
             imagine: form.querySelector("#site").value,
@@ -24,7 +23,7 @@ function adaugaPreparat(form, event){
     // De pus functia "drawPreparateAdmin()" aici dupa ce rezolv din admin
 
     // **********************************************************************
-    // function drawPreparateAdmin(){
+    // function drawPreparateAdmin2(){
     //     var xhttp = new XMLHttpRequest();
     //     xhttp.onreadystatechange = function() {
     //         if (this.readyState == 4 && this.status == 200) {
@@ -38,10 +37,9 @@ function adaugaPreparat(form, event){
     
     //                 var rand = `<tr>
     //                     <td><img src="${listaPreparate[i].imagine}"></td>
-    //                     <td> <span id = "fel">${listaPreparate[i].nume}</span> <br/> 
-    //                     <span id= "ing"> ${listaPreparate[i].ingrediente}</span></td>
-    //                     <td><button class="btn1"> <a href="edit.html?id=${i}">Modifica</a></button></td>
-    //                     <td><button id="btn2"><a href="delete.html?id=${i}">Sterge</a></button></td>
+    //                     <td>${listaPreparate[i].nume} </td>
+    //                     <td>${listaPreparate[i].ingrediente}</span></td>
+    //                     <td>${listaPreparate[i].reteta}</td>
     //                 </tr>`;
     //                 str +=rand;
     //             }

@@ -40,15 +40,16 @@
     border:none;
     background-color: rgb(43, 144, 226);
     border-radius: 5px;
-    width: 100px;
+    width: 80px;
     float: right;
    }
 
 .menu{
    border:none;
     border-radius: 5px;
-    width: 100px;
-    background-color: rgb(6, 53, 14);
+    width: 80px;
+    background-color: rgb(9, 138, 30);
     float: right;
+    margin-right:10px ;
 
    }

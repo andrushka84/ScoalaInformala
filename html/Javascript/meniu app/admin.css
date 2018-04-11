@@ -1,0 +1,40 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn1{
+ background-color:royalblue;
+ border: none;
+ border-radius: 3px;
+}
+
+#btn2{
+background-color: red;
+border: none;
+border-radius: 3px;
+
+}
+
+h1{
+    font-family: "Tangerine";
+}
+
+img{
+    width: 100px;
+    height: 100px; 
+    border-style: groove;
+    border-color: teal;
+    margin: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+#fel{
+    font-weight: bold;
+}
+
+#ing{
+    font-style: italic;
+}
