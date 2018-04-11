@@ -1,4 +1,3 @@
-var listaPreparate=[];
 
 function modificaPreparat(form, event){
     event.preventDefault();

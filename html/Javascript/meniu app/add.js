@@ -1,4 +1,3 @@
-var listaPreparate=[];
 
 function adaugaPreparat(form, event){
     event.preventDefault();
