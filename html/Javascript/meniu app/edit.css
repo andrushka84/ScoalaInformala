@@ -1,0 +1,56 @@
+#wrapper{
+    background-color: rgb(255, 255, 255);
+    margin: 100px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    background-color: green;
+    display: flex;
+    width: 250px;
+    justify-content: center;
+
+}
+
+form{
+    width: 350px;
+    
+
+}
+
+label{
+ font-size: 10pt;
+ font-weight: bold;
+ color: white;
+}
+
+
+#save{
+    color: white;
+    background-color:red;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    width: 200px;
+    font-kerning: normal;
+    word-spacing: 1px;
+    /* justify-content: center; */
+
+    
+}
+
+/* .input{
+    width: 200px;
+
+} */
+
+placeholder{
+    font-size: 10pt;
+}
+
+#name1, #site1, #ingredients1, #how1{
+    width: 200px;
+    justify-content: center;
+    border: none;
+}
+
