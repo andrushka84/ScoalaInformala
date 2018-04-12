@@ -38,3 +38,9 @@ img{
 #ing{
     font-style: italic;
 }
+
+#loading{
+    border:none;
+    width: 350px;
+    height: 350px;
+}
