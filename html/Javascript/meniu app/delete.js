@@ -10,10 +10,7 @@ function stergePreparat(){
     };
     var id =window.location.search.substring(4);
     
-    // *******************************************************************************************
-    // var preparat = listaPreparate.nume;
-    // document.getElementById("preparat").innerHTML = preparat;
-    // *******************************************************************************************
+
     
     xhttp.open("DELETE", "https://menu-83f09.firebaseio.com/menu/"+id+"/.json", true);
     xhttp.send();

@@ -3,12 +3,21 @@ var listaPreparate={};
 
 function drawPreparateAdmin(){
 	var xhttp = new XMLHttpRequest();
+
+
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			
 			listaPreparate = JSON.parse(this.responseText);
 
+// ********************************************************************************************************************
 
+		document.getElementById("loading").style.display = "none";
+		document.getElementById("preparate").style.display = "block";
+
+
+
+// ********************************************************************************************************************
 			var tabel=document.querySelector("#preparate tbody");
 			var str="";
 			for(i in listaPreparate){
@@ -28,6 +37,10 @@ function drawPreparateAdmin(){
 	};
 	xhttp.open("GET", "https://menu-83f09.firebaseio.com/menu/.json", true);
 	xhttp.send();
+
+	document.getElementById("loading").style.display = "block";
+	document.getElementById("preparate").style.display = "none";
+
 
 }
 
