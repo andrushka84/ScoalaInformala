@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="edit.css">
     <script src="edit.js"></script>
 </head>
-<body>
+<body onload="modificaPreparat()">
     
     <div id="wrapper">
 
@@ -22,12 +22,12 @@
             <input type="text" class ="input" name="adaugare" id="site1" placeholder="Scrie URL-ul fotografiei aici"> <br/>
     
             <label for="ingredients"></label> <br/>
-            <textarea name="adaugare1" class="input" cols="1" rows="1" id="ingredients1" placeholder="Scrie ingredientele aici"></textarea>
+            <textarea name="adaugare1" class="input" cols="1" rows="2" id="ingredients1" placeholder="Scrie ingredientele aici"></textarea>
     
             <label for="how"></label> <br/>
-            <textarea name="adaugare1" class="input" cols="1" rows="1" id="how1" placeholder="Scrie modul de preparare aici"></textarea>
+            <textarea name="adaugare1" class="input" cols="1" rows="2" id="how1" placeholder="Scrie modul de preparare aici"></textarea>
     
-            <input type="button" value="SALVEAZA PREPARAT" id="save" onclick="modificaPreparat(form,event)">
+            <input type="button" value="SALVEAZA PREPARAT" id="save" onclick="salveazaPreparat(form,event)">
     
     
         </form>
