@@ -20,6 +20,11 @@ function stergePreparat(){
 
 }
 
+function nuSterge(){
+    window.location = "admin.html";
+
+}
+
     // de vazut cum fac sa-mi arate numele preparatului
     // la var preparat ... imi da eroare loop infinit !!!!!!!!!!!!!!!!!!
     //am pus window.location = "admin.html" in loc de drawPreparateAdmin()

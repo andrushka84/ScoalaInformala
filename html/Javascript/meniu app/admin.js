@@ -1,5 +1,5 @@
 
-var listaPreparate=[];
+var listaPreparate={};
 
 function drawPreparateAdmin(){
 	var xhttp = new XMLHttpRequest();
@@ -11,7 +11,7 @@ function drawPreparateAdmin(){
 
 			var tabel=document.querySelector("#preparate tbody");
 			var str="";
-			for(var i=0; i<listaPreparate.length; i++){
+			for(i in listaPreparate){
 
 				var rand = `<tr>
 					<td><img src="${listaPreparate[i].imagine}"></td>
