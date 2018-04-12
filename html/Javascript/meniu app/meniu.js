@@ -22,6 +22,9 @@ function drawPreparate(){
 			listaPreparate.menu["-KwPAvBToUdP7-TriCr4"].imagine="http://www.papabun.com/wp-content/poze/Clatite-cu-Nuci-si-Smantana.jpg"
 			listaPreparate.menu["-KwPAvBToUdP7-TriCr4"].nume ="clatite cu nuci si smantana";
 			listaPreparate.menu["-KwPAvBToUdP7-TriCr4"].ingrediente ="lapte, oua, faina, nuci, smantana";
+			listaPreparate.menu["-L9uxD_ggdGYdIcWhNFB"].imagine="http://clickpoftabuna.ro/wp-content/uploads/2015/10/tort-cu-ciocolata-si-rom-580x400.jpg"
+			listaPreparate.menu["-L9uxD_ggdGYdIcWhNFB"].nume ="tort cu ciocolata";
+			listaPreparate.menu["-L9uxD_ggdGYdIcWhNFB"].ingrediente ="lapte, oua, faina, nuci, smantana, ciocolata";
 
 			var tabel=document.querySelector("#menu tbody");
 			var str="";

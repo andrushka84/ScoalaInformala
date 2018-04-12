@@ -1,4 +1,3 @@
-// "https://restaurant-menu-v1.firebaseio.com/menu/${i}.json"
 
 var i = 0;
 var detaliiPreparat = {};
