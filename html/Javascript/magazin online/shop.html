@@ -6,19 +6,33 @@
     <link rel="stylesheet" href="shop.css">
     <script src="shop.js"></script>
 </head>
-<body>
+<body onload="drawProduse()">
     
+    <h1>Zen Relax</h1>
 
+    <div class="wrapper">
 
-
-
-
-
-
-
-
-
-
+        <form id="cautare" onsubmit="event.preventDefault();drawProduse()">
+            <input type="text" placeholder="Scrie produsul aici" id="search" >
+            <button class="add" onclick = "drawProduse()">Cauta produs</button>
+    </form>    
     
+    
+     <table id="produs">
+            <thead>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+
+
+        
+    </div>
+
 </body>
 </html>

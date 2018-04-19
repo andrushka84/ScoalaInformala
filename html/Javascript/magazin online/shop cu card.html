@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Shop</title>
+    <link rel="stylesheet" href="card.css">
+    <script src="card.js"></script>
+</head>
+<body>
+    <!-- body onload="drawProduse()" -->
+    <h1>Zen Relax</h1>
+
+    <div class="wrapper">
+
+        <form id="cautare" onsubmit="event.preventDefault();drawProduse()">
+            <input type="text" placeholder="Scrie produsul aici" id="search" >
+            <button class="add" onclick = "drawProduse()">Cauta produs</button>
+    </form>    
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="card">
+        <div class="imagine">
+             <img src="centru-spa.jpg" alt="" id ="picture">
+        </div>
+        <div class="container">
+          <img src="add to cart.svg" class ="cart" alt="">
+          <h4 class="title">Titlu</h4> 
+          <p class="author">Autor</p> 
+          <p class="show">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni ipsam facilis deserunt quasi voluptas dolorum, aut odio officiis itaque perspiciatis architecto eum voluptatum sapiente deleniti quod tempora et qui dolor?</p> 
+          <button>Detalii</button>
+        </div> 
+    </div>
+
+</body>
+</html>
