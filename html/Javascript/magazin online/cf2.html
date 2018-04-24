@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Card</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    
+    <link rel="stylesheet" href="card2.css">
+    <script src="cf2.js"></script>
+
+    <body onload="drawProduse()">
+
+        <h1>Zen Relax</h1>
+
+        <div class="container-fluid">
+
+            <form id="cautare" onsubmit="event.preventDefault();drawProduse()">
+                <div>
+                    <input type="search" placeholder="Scrie aici ce vrei sa cauti" id="search" style="border:none">
+                    <a href="#"> <span onclick="drawProduse()"><i class="fas fa-search"></i></span></i>
+                    </a>
+                </div>
+            </form>
+            <br/>
+            <br/>
+            <br/>
+
+    <div class="card"></div>
+
+
+</body>
+
+</html>
