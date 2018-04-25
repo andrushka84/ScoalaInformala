@@ -1,0 +1,39 @@
+button{
+    color: white;
+    margin-right: 5px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#yes{
+    background-color: red;
+
+}
+
+#no{
+    background-color: green;
+    
+}
+
+
+html {
+    background: url("nisip.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+  }
+
+/* aia cu poza pe toata pagina luata de pe CSS tricks 
+        https://css-tricks.com/perfect-full-page-background-image/
+  */
+
+  .wrapper{
+      font-family: "Open Sans";
+  }
+
+
+  #item{
+      font-kerning: normal;
+      font-size: 20px;
+      font-style: italic;
+  }

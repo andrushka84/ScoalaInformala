@@ -29,7 +29,7 @@ function aduProdusul() {
         if (this.readyState == 4 && this.status == 200) {
 
             produs = JSON.parse(this.responseText);
-            var nume = produs.nume;
+            var nume = produs.titlu;
             document.getElementById("item").innerHTML = nume;
         }
 
@@ -38,7 +38,7 @@ function aduProdusul() {
     var id =window.location.search.substring(4);
    
 
-    xhttp.open("GET", "https://menu-83f09.firebaseio.com/menu/"+id+"/.json", true);
+    xhttp.open("GET", "https://magazin-online-64a15.firebaseio.com/"+id+"/.json", true);
     xhttp.send();
 
 }

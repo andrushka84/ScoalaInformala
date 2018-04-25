@@ -1,0 +1,81 @@
+.input-icon-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .input-icon {
+    background-color: purple;
+    color: white;
+    width: 30px;
+    text-align: center;
+  
+  }
+  
+  .input-with-icon {
+    border: none;
+    flex: 1;
+    
+  }
+  
+  .input-icon, .input-with-icon {
+    padding: 10px;
+  }
+  
+  form{
+      display: flex;
+      background-color: rgba(70, 130, 180, 0.5);
+      border-radius: 5px;
+      flex-direction: column;
+      align-items: center;
+      margin: 35px;
+      padding-top: 35px;
+      width: 70%;
+    
+  }
+  
+  
+  #save{
+      border-radius: 5px;
+      background-color: purple;
+      color: white;
+      text-align: center;
+      border: none;
+      margin: 20px;
+      font-family: "Tangerine";
+      font-size: 20pt;
+  }
+  
+  ::placeholder{
+      font-family: "Tangerine";
+      font-size: 20px;
+  }
+  
+  #data{
+      font-family: "Tangerine";
+      font-size: 20px;
+
+  }
+  
+  
+  textarea .input-icon{
+          width: 30px;
+  }
+  
+  body{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  }
+  
+  html {
+    background: url("stone.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+  }
+  

@@ -24,9 +24,7 @@ body{
 
 }
 
-.card:last-child() {
-    margin-bottom: 0;
-}
+
 
 .cart{
     width:45px;
@@ -87,4 +85,5 @@ h1{
     font-size: 30px;
     color: purple;
 }
+
 

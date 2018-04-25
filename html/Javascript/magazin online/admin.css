@@ -54,3 +54,28 @@ h1{
     color:rgb(255, 102,0);
     text-align: center;
 }
+
+
+.btn1{
+    background-color:royalblue;
+    border: none;
+    border-radius: 3px;
+   }
+   
+#btn2{
+   background-color: red;
+   border: none;
+   border-radius: 3px;
+   
+   }
+
+   /* a:link si a:cover pt ca linkul sa nu fie albstru cand pun mouse-ul pe el */
+
+   a:link{
+    text-decoration: none;
+   }
+
+   a:hover{
+    color: white;
+
+   }

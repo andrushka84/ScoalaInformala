@@ -12,15 +12,19 @@ function adaugaProdus(form, event){
         xhttp.open("POST", "https://magazin-online-64a15.firebaseio.com/.json", true);
         xhttp.send(JSON.stringify({
             titlu: form.querySelector("#titlu").value,
-            imagine: form.querySelector("#imagine").value,
             autor: form.querySelector("#autor").value,
+            imagine: form.querySelector("#imagine").value,
+            codProdus: form.querySelector("#codProdus").value,
+            dataPublicarii: form.querySelector("#dataPublicarii").value,
+            categorie: form.querySelector("#categorie").value,
             descriere: form.querySelector("#descriere").value,
-            data: form.querySelector("#data").value,
-            cod: form.querySelector("#codProdus").value,
+            pret: form.querySelector("#pret").value,
+            
+
+
         }));
 
     }
 
 
-    //am pus window.location = "admin.html" in loc de drawPreparateAdmin()
 

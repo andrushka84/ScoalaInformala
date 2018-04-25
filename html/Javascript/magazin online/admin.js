@@ -39,7 +39,9 @@ function drawProduseAdmin(){
                         <br/>
                         <p class=" description text-muted text-truncate"> ${listaProduse[i].descriere}
                         </p>
-                       
+					   
+						<button class="btn1"> <a href="edit.html?id=${i}">Modifica</a></button>
+						<button id="btn2"><a href="delete.html?id=${i}">Sterge</a></button>
                                  
                         </div>
                         </div>
