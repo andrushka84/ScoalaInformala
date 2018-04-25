@@ -1,6 +1,43 @@
-img{
-    height: 250px;
-    width: 250px;
-    border-radius: 10px;
-    object-fit: cover;
+body{
+   padding: 20px;
+   
+
+
 }
+
+
+#titlu{
+    /* font-family: "Tangerine"; */
+    font-weight: bold;
+    font-size: 20px;
+    font-kerning: normal;
+    font-family: "Open Sans";
+}
+
+#autor{
+    font-family: "Open Sans";
+    font-size: 14pt;
+    font-kerning: normal;
+    font-style: italic;
+
+}
+
+#descriere{
+    font-kerning: normal;
+    font-size: 10pt;
+    text-align: justify;
+    font-family: "Open Sans";
+    line-height: 150%;
+
+}
+
+#data, #codProdus{
+    font-kerning: normal;
+    font-size: 10pt;
+    font-family: "Open Sans";
+    line-height: 150%;
+
+
+
+}
+

@@ -11,36 +11,54 @@ function drawProduseAdmin(){
 			listaProduse = JSON.parse(this.responseText);
 
 // ********************************************************************************************************************
+		var card = document.querySelector(".row");
 
-		document.getElementById("loading").style.display = "none";
-		document.getElementById("products").style.display = "block";
+		// document.getElementById("loading").style.display = "none";
+		// document.getElementsByClassName("row").style.display = "block";
 
 // ********************************************************************************************************************
-			var tabel=document.querySelector("#products tbody");
-            var str="";
-            
+		var str="";
+					
 
         // de vazut cum fac cu categoriile
 			for(i in listaProduse){
 
-				var rand = `<tr>
-					<td><img src="${listaProduse[i].imagine}"></td>
-					<td> <span id = "fel">${listaProduse[i].titlu}</span> <br/> 
-					<span id= "ing"> ${listaProduse[i].autor}</span></td>
-					<td><button class="btn1"> <a href="edit.html?id=${i}">Modifica</a></button></td>
-					<td><button id="btn2"><a href="delete.html?id=${i}">Sterge</a></button></td>
-				</tr>`;
+				var rand = `
+
+				<div class="col-xs-12 col-12 col-md-6 col-lg-3"> 
+
+                    <div class="card">
+                        <img class="card-img-top" src="${listaProduse[i].imagine}" alt="">
+                    <div class="card-body">
+                        <p class="price">
+                            <span class="pret"> ${listaProduse[i].pret} lei</span>
+                        </p>
+                        <br/>
+                        <h5 class="card-title">${listaProduse[i].titlu}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">${listaProduse[i].autor}</h6>
+                        <br/>
+                        <p class=" description text-muted text-truncate"> ${listaProduse[i].descriere}
+                        </p>
+                       
+                                 
+                        </div>
+                        </div>
+                        </div>
+
+
+                        `;
+
 				str +=rand;
 			}
 			console.log(str);
-			tabel.innerHTML=str;
+			card.innerHTML = str;
 		}
 	};
 	xhttp.open("GET", "https://magazin-online-64a15.firebaseio.com/.json", true);
 	xhttp.send();
 
-	document.getElementById("loading").style.display = "block";
-	document.getElementById("products").style.display = "none";
+	// document.getElementById("loading").style.display = "block";
+	// document.getElementsByClassName("row").style.display =  "none";
 
 
 }

@@ -14,7 +14,7 @@ function drawDetalii(){
 			var author = detaliiProdus.autor;
             var description = detaliiProdus.descriere;
             var date = detaliiProdus.dataPublicarii;
-            var productCode = detaliiProdus.codProdus;
+            // var productCode = detaliiProdus.codProdus;
 
 			
 			document.getElementById("imagine").src = picture;
@@ -22,7 +22,7 @@ function drawDetalii(){
 			document.getElementById("autor").innerHTML = author;
             document.getElementById("descriere").innerHTML = description;
             document.getElementById("data").innerHTML = date;
-            document.getElementById("codProdus").innerHTML = productCode;
+            // document.getElementById("codProdus").innerHTML = productCode;
 
             
             for(var i in detaliiProdus){	

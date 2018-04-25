@@ -10,62 +10,37 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="card2.css">
+    
+    <link rel="stylesheet" href="card final.css">
     <script src="card final.js"></script>
 
     <body onload="drawProduse()">
 
-        <h1>Zen Relax</h1>
+        <div id="zen">
+                <h1>Zen Relax</h1>
+        </div>
 
-        <div class="wrapper">
+        <div class="container-fluid">
 
             <form id="cautare" onsubmit="event.preventDefault();drawProduse()">
                 <div>
                     <input type="search" placeholder="Scrie aici ce vrei sa cauti" id="search" style="border:none">
-                    <i class="fas fa-search"></i>
+                    <a href="#"> <span onclick="drawProduse()"><i class="fas fa-search"></i></span></i>
+                    </a>
                 </div>
             </form>
             <br/>
             <br/>
             <br/>
 
-            <div class="card" style="width: 18rem;">
-
-                <!-- col-xs-1 col-sm-2 col-md-4 col-lg-8 col-xl-8 -->
-
-                <img class="card-img-top" src="" alt="">
-
-                <div class="card-body">
-
-                    <p class="price">
-                        <span class="pret"> lei</span>
-                        <span>
-                            <img src="add to cart.svg" class="cart" alt="">
-                        </span>
-                    </p>
-
-                    <br/>
-
-                    <h5 class="card-title"></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"></h6>
-
-                    <br/>
+    <div class="row" >
+        
+        
+        
+    </div>
+            
 
 
-                    <p class="description text-muted text-truncate"> </p>
-
-
-                    <div class="text-center">
-
-                        <a href="detalii.html?id=${i}" class="btn btn-success btn-sm" style="font-family: Open Sans"> Detalii
-                            <span class="fab fa-envira"></span>
-                        </a>      
-                                          
-                    </div>
-
-                </div>
-
-            </div>
-    </body>
+</body>
 
 </html>

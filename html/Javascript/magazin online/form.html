@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <title>Document</title>
+
+<style>
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+
+</style>
+
+</head>
+<body>
+        <form>
+                <h2>Register Form</h2>
+                <div class="input-container">
+                    <span><i class="fas fa-user"></i></span>
+                  <input class="input-field" type="text" placeholder="Username" name="usrnm">
+                </div>
+              
+                <div class="input-container">
+                  <i class="fas fa-envelope"></i>
+                  <input class="input-field" type="text" placeholder="Email" name="email">
+                </div>
+              
+                <div class="input-container">
+                  <i class="fas fa-key"></i>
+                  <input class="input-field" type="password" placeholder="Password" name="psw">
+                </div>
+              
+                <button type="submit" class="btn">Register</button>
+              </form>
+</body>
+</html>
+
+

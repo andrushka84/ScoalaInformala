@@ -1,6 +1,56 @@
-img{
-    /* border-radius: 50%; */
-    height: 100px ;
-    width: 100px;
-    object-fit: cover;
+body{
+    margin: 30px;
+    background-image: url("leaf.jpg");
+}
+
+
+
+.row{
+    margin: 20px;
+   align-items: flex-start;
+}
+
+a{ 
+    color: white;
+    text-decoration: none;
+    /* font-weight: bold; */
+    font-family: "Open Sans";
+    font-size: 14pt;
+    
+}
+
+h1{
+    margin-bottom: 20px;
+    font-family: "Tangerine";
+    font-size: 50pt;
+    /* font-weight: bold; */
+    text-align: center;
+    color: white;
+}
+
+
+.card {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    width: 14rem;
+    overflow: hidden;
+
+}
+
+
+.btn{
+    color:white;
+    border-radius: 5px;
+    background-color: #2A3493
+    
+}
+
+.pret{
+    font-family:Open Sans; 
+    font-size:20px; 
+    font-weight:bold;
+    padding-top: 0px;
+    color:rgb(255, 102,0);
+    text-align: center;
 }
