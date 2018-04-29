@@ -13,8 +13,8 @@ function drawProduseAdmin(){
 // ********************************************************************************************************************
 		var card = document.querySelector(".row");
 
-		// document.getElementById("loading").style.display = "none";
-		// document.getElementsByClassName("row").style.display = "block";
+		document.getElementById("loading").style.display = "none";
+		card.style.display = "flex";
 
 // ********************************************************************************************************************
 		var str="";
@@ -25,7 +25,7 @@ function drawProduseAdmin(){
 
 				var rand = `
 
-				<div class="col-xs-12 col-12 col-md-6 col-lg-3"> 
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"> 
 
                     <div class="card">
                         <img class="card-img-top" src="${listaProduse[i].imagine}" alt="">
@@ -59,8 +59,8 @@ function drawProduseAdmin(){
 	xhttp.open("GET", "https://magazin-online-64a15.firebaseio.com/.json", true);
 	xhttp.send();
 
-	// document.getElementById("loading").style.display = "block";
-	// document.getElementsByClassName("row").style.display =  "none";
+	document.getElementById("loading").style.display = "block";
+	card.style.display =  "none";
 
 
 }

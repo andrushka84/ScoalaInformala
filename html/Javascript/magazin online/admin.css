@@ -1,13 +1,14 @@
 body{
     margin: 30px;
-    background-image: url("leaf.jpg");
+    background-image: url("leaf.jpg"); 
 }
-
-
 
 .row{
     margin: 20px;
-   align-items: flex-start;
+    align-items: flex-start;
+    justify-content: center;
+
+    
 }
 
 a{ 
@@ -79,3 +80,4 @@ h1{
     color: white;
 
    }
+

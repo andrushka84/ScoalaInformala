@@ -1,3 +1,10 @@
+// *************************************************************************************
+
+
+
+// ***************************************************************************************
+
+
 function drawProduse() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -6,6 +13,13 @@ function drawProduse() {
 
 
             var card = document.querySelector(".row");
+    // *****************************************************************************************************
+            document.getElementById("loading").style.display = "none";
+            card.style.display = "flex";
+            
+    // *****************************************************************************************************
+
+
             var str = "";
 
             for (var i in listaProduse) {
@@ -26,7 +40,7 @@ function drawProduse() {
                         <p class="price">
                             <span class="pret"> ${listaProduse[i].pret} lei</span>
                             <span>
-                            <a href="cart.html"><img src="add to cart.svg" class="cart" alt=""></a>
+                            <a href="cart3.html?id=${i}"><img src="add to cart.svg" class="cart" alt=""></a>
                             </span>
                         </p>
                         <br/>
@@ -62,5 +76,8 @@ function drawProduse() {
     xhttp.send();
 }     
 
+// *****************************************************************************************************
+document.getElementById("loading").style.display = "block";
+card.style.display = "none";
 
-// *******************************************************************************************************
+// *****************************************************************************************************

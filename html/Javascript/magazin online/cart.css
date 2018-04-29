@@ -3,7 +3,7 @@
 }
 @media screen and (max-width: 600px) {
     #cart tbody td .form-control{
-		width:20%;
+		/* width:20%; */
 		display: inline !important;
 	}
 	.actions .btn{
@@ -31,4 +31,22 @@
 
 .product{
     padding-left: 50px;
+}
+
+img{
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}
+
+#sterge{
+	background-color:hsl(0, 55%, 50%);
+	color: white;
+	border:none;
+}
+
+#gol{
+	font-style: italic;
+	font-family: "Tangerine";
+	font-size:32pt;
 }

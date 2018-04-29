@@ -8,11 +8,15 @@ button{
 
 #yes{
     background-color: red;
+    width: 100px;
+
 
 }
 
 #no{
     background-color: green;
+    width: 100px;
+
     
 }
 

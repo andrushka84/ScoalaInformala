@@ -116,4 +116,6 @@ function del(index) {
     drawClienti();
 }
 
-  
+}
+
+}
