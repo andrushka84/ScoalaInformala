@@ -33,7 +33,7 @@ function aduProdusul() {
             memoreazaCosul(event);
 
             // *****************************************************************************************
-            // deseneazaCosul();
+            deseneazaCosul();
         }
     };
 
@@ -125,65 +125,63 @@ function actualizeazaCosul(){
     
 
 // DE TERMINAT ****************************************************************************************************
-// function deseneazaCosul(){
+function deseneazaCosul(){
 
-// var xhttp = new XMLHttpRequest();
-//     xhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
+var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
 
-//             listaProduse = JSON.parse(this.responseText);
+            listaProduse = JSON.parse(this.responseText);
 
-//             // *****************************************************************************************
-//             var tabel=document.querySelector("#cart tbody");
-// 			var str="";
+            // *****************************************************************************************
+            var tabel=document.querySelector("#cart tbody");
+			var str="";
 
-// 			for(var i in listaProduse){
+			for(var i in listaProduse){
 				
-// 				//  listaProduse[i].id = i;
+                var rand = `<tr>
 
-//                 var rand = `<tr>
+                <td>
+                        <div class="col-sm-2">
+                                <img src="" alt="..." class="img-responsive" id="poza"/>
+                                </div>
+                </td>
 
-//                 <td>
-//                         <div class="col-sm-2">
-//                                 <img src="" alt="..." class="img-responsive" id="poza"/>
-//                                 </div>
-//                 </td>
-
-//                 <td data-th="Product">
-//                     <div class="row">
-//                         <div class="col-sm-10 " id="produs"></div>
+                <td data-th="Product">
+                    <div class="row">
+                        <div class="col-sm-10 " id="produs"></div>
                         
-//                     </div>
-//                 </td>
+                    </div>
+                </td>
                
-//                 <td data-th="Price" id="pret"></td>
-//                 <td data-th="Quantity" >
-//                     <input type="number" class="form-control text-center" value="1" id="cantitate">
-//                 </td>
-//                 <td data-th="Subtotal" class="text-center" id="subtotal"></td>
-//                 <td class="actions" data-th="">
-//                     <button class="btn btn-info btn-sm" id="refresh" ><i class="fas fa-sync-alt" onclick="actualizeazaCosul()"></i></button>
-//                     <button class="btn btn-danger btn-sm" id="delete" onclick="stergeProdusDinCos()"><i class="fas fa-trash"></i></button>								
-//                 </td>
+                <td data-th="Price" id="pret"></td>
+                <td data-th="Quantity" >
+                    <input type="number" class="form-control text-center" value="1" id="cantitate">
+                </td>
+                <td data-th="Subtotal" class="text-center" id="subtotal"></td>
+                <td class="actions" data-th="">
+                    <button class="btn btn-info btn-sm" id="refresh" ><i class="fas fa-sync-alt" onclick="actualizeazaCosul()"></i></button>
+                    <button class="btn btn-danger btn-sm" id="delete" onclick="stergeProdusDinCos()"><i class="fas fa-trash"></i></button>								
+                </td>
 
-//                <tr/> `
+               <tr/> `
 
-// 				str +=rand;
-// 			}
-// 			console.log(str);
-// 			tabel.innerHTML=str;
-// 		}
-// 	};
-//             // *****************************************************************************************
+				str +=rand;
+			}
+			console.log(str);
+			tabel.innerHTML=str;
+		}
+	};
+            // *****************************************************************************************
 
         
     
 
-//     xhttp.open("GET", "https://shopping-cart-magazin-online.firebaseio.com/.json", true);
-//     xhttp.send();
+    xhttp.open("GET", "https://shopping-cart-magazin-online.firebaseio.com/.json", true);
+    xhttp.send();
 
 
-// }
+}
 
 
 function stergeCosul(){
@@ -194,7 +192,7 @@ function stergeCosul(){
         if (this.readyState == 4 && this.status == 200) {
            
          
-            document.querySelectorAll(".wrapper").innerHTML=  
+            document.querySelector("#wrapper").innerHTML=  
             `
               <p id="gol"> Cosul tau este gol. </p> 
               <a href="card final.html" class="btn btn-warning">

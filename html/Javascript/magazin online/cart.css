@@ -46,7 +46,10 @@ img{
 }
 
 #gol{
-	font-style: italic;
 	font-family: "Tangerine";
 	font-size:32pt;
+}
+
+body{
+	margin: 50px;
 }
