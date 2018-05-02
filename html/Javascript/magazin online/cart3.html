@@ -45,7 +45,7 @@
                                    
                                     <td data-th="Price" id="pret"></td>
                                     <td data-th="Quantity" >
-                                        <input type="number" class="form-control text-center" value="1" id="cantitate">
+                                        <input type="number" class="form-control text-center" value="1" id="cantitate" onchange="actualizeazaCosul(this);">
                                     </td>
                                     <td data-th="Subtotal" class="text-center" id="subtotal"></td>
                                     <td class="actions" data-th="">
@@ -66,13 +66,16 @@
                                             </td>
                                             <td id="tva"></td>
                 
-                                        </tr>
+                                    </tr>
                                 
                                 <tr>
                                     <td><a href="card final.html" class="btn btn-warning">
                                         <i class="fas fa-angle-left"></i> Continua cumparaturile</a></td>
                                     <td colspan="2" class="hidden-xs"></td>
-                                    <td class="hidden-xs text-center"><strong>Total <span id="total"></span></strong></td>
+                                    <td class="hidden-xs text-center"><strong><span>Total</span></strong></td>
+                                    
+                                    <td class="hidden-xs text-center"><strong> <span id="total"></span></strong></td>
+
                                     <td></td>
                                     <td><a href="checkout.html" class="btn btn-success btn-block">Checkout <i class="fas fa-angle-right"></i></a></td>
                                 </tr>
