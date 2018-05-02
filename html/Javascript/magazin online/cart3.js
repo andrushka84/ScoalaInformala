@@ -63,7 +63,6 @@ function stergeProdusDinCos() {
 
 function actualizeazaCosul(elem){
 
-    elem.value = 1;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -74,14 +73,9 @@ function actualizeazaCosul(elem){
 
     var id =window.location.search.substring(4);
 
-    xhttp.open("PUT", "https://shopping-cart-magazin-online.firebaseio.com/" +id +".json", true);
-
-    xhttp.send(JSON.stringify({
-
-        cantitate: listaProduse.cantitate,
-        
-    }));
-
+    xhttp.open("PUT", "https://shopping-cart-magazin-online.firebaseio.com/" +id+"/cantitate" +".json", true);
+    xhttp.send(JSON.stringify(elem.value));
+    // JSON.stringify(elem.value)
 }
 
 // Memoreaza cosul atunci cand adaug mai mult de un produs
@@ -137,7 +131,7 @@ function deseneazaCosul() {
         <td data-th="Price">${listaProduse[i].pret}</td>
 
         <td data-th="Quantity">
-            <input type="number" class="form-control text-center" value="${listaProduse[i].cantitate}" onchange="actualizeazaCosul(elem);" />
+            <input type="number" class="form-control text-center" value="${listaProduse[i].cantitate}" onchange="actualizeazaCosul(this);" />
         </td>
 
         <td data-th="Subtotal" class="text-center">${listaProduse[i].subtotal}</td>
