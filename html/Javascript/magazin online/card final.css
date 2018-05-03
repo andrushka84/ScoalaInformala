@@ -2,7 +2,7 @@
 body{
     margin: 25px;
     border: none;
-    background-image: url(leaf.jpg);
+    background-image: url("leaf.jpg");
 }
 
 

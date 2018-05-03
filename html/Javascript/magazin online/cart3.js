@@ -1,10 +1,7 @@
-
 var subtotal = 0;
-
-// Adauga primul produs in cos si memoreaza cosul cand adaug mai multe produse
 function aduProdusul() {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
             listaProduse = JSON.parse(this.responseText);
@@ -18,7 +15,7 @@ function aduProdusul() {
             var pret = parseInt(listaProduse.pret);
             document.getElementById("pret").innerHTML = pret;
 
-            var cantitate= parseInt(document.getElementById("cantitate").value);
+            var cantitate = parseInt(document.getElementById("cantitate").value);
 
             subtotal = pret * cantitate;
             document.getElementById("subtotal").innerHTML = subtotal;
@@ -26,19 +23,18 @@ function aduProdusul() {
             var tva = 0.19 * subtotal;
             document.getElementById("tva").innerHTML = tva;
 
-            var total = subtotal + tva ;
+            var total = subtotal + tva;
             document.getElementById("total").innerHTML = total;
 
-            // *****************************************************************************************
             memoreazaCosul(event);
-            // // *****************************************************************************************
+
             deseneazaCosul();
+
         }
     };
-
     var id = window.location.search.substring(4);
 
-    xhttp.open("GET", "https://magazin-online-64a15.firebaseio.com/"+id+"/.json", true);
+    xhttp.open("GET", "https://magazin-online-64a15.firebaseio.com/" + id + "/.json", true);
     xhttp.send();
 }
 
@@ -46,64 +42,68 @@ function aduProdusul() {
 
 function stergeProdusDinCos() {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(){
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-        //   deseneazaCosul();
+            //   deseneazaCosul();
 
+        }
     }
-}
 
-    var id =window.location.search.substring(4);
+    var id = window.location.search.substring(4);
 
-    xhttp.open("DELETE", "https://shopping-cart-magazin-online.firebaseio.com/"+id+"/.json", true);
+    xhttp.open("DELETE", "https://shopping-cart-magazin-online.firebaseio.com/" + id + "/.json", true);
     xhttp.send();
 }
 
 // Actualizeaza cantitatea din cos; ar trebui sa-mi calculeze si subtotalul 
 
-function actualizeazaCosul(elem){
+function actualizeazaCosul(elem) {
 
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
         }
 
-         listaProduse = JSON.parse(this.responseText);
+        listaProduse = JSON.parse(this.responseText);
     };
 
-    var id =window.location.search.substring(4);
+    var id= window.location.search.substring(4);
 
-    xhttp.open("PUT", "https://shopping-cart-magazin-online.firebaseio.com/" +id+"/cantitate" +".json", true);
+
+    xhttp.open("PUT", "https://shopping-cart-magazin-online.firebaseio.com/" + id + "/" + "cantitate" + ".json", true);
     xhttp.send(JSON.stringify(elem.value));
-    // JSON.stringify(elem.value)
 }
 
 // Memoreaza cosul atunci cand adaug mai mult de un produs
 
-    function memoreazaCosul(event){
-        event.preventDefault();
-        
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                }
-            };
-            
-            xhttp.open("POST", "https://shopping-cart-magazin-online.firebaseio.com/.json", true);
-            xhttp.send(JSON.stringify({
+function memoreazaCosul(event) {
+    event.preventDefault();
 
-                poza: document.querySelector("#poza").src,
-                produs: document.querySelector("#produs").innerHTML,
-                pret: document.querySelector("#pret").innerHTML,
-                cantitate: parseInt(document.querySelector("#cantitate").value),
-                subtotal: document.querySelector("#subtotal").innerHTML,
-                tva: document.querySelector("#tva").innerHTML,
-                total: document.querySelector("#total").innerHTML,
-
-            }));
-    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
         }
-    
+    };
+
+    var id= window.location.search.substring(4);
+
+
+    xhttp.open("PUT", "https://shopping-cart-magazin-online.firebaseio.com/"+id+".json", true);
+    xhttp.send(JSON.stringify({
+
+        poza: document.querySelector("#poza").src,
+        produs: document.querySelector("#produs").innerHTML,
+        pret: document.querySelector("#pret").innerHTML,
+        cantitate: parseInt(document.querySelector("#cantitate").value),
+        subtotal: document.querySelector("#subtotal").innerHTML,
+        tva: document.querySelector("#tva").innerHTML,
+        total: document.querySelector("#total").innerHTML,
+        // id= window.location.search.substring(4),
+
+    }));
+
+}
+
 
 // Deseneaza tabelul cu produsele din cos
 
@@ -159,28 +159,27 @@ function deseneazaCosul() {
 
 // Sterge cosul
 
-function stergeCosul(){
+function stergeCosul() {
 
     document.querySelector("#cart").remove();
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-           
-         
-            document.querySelector("#wrapper").innerHTML=  
-            `
+
+
+            document.querySelector("#wrapper").innerHTML =
+                `
               <p id="gol"> Cosul tau este gol. </p> 
               <a href="card final.html" class="btn btn-warning">
               <i class="fas fa-angle-left"></i> Continua cumparaturile</a>
 
-            ` 
-        
+            `
         }
     };
 
-    xhttp.open("DELETE", "https://shopping-cart-magazin-online.firebaseio.com/.json", true); 
+    xhttp.open("DELETE", "https://shopping-cart-magazin-online.firebaseio.com/.json", true);
     xhttp.send();
 
-   
-   
+
+
 }
