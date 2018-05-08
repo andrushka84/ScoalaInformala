@@ -52,7 +52,7 @@ function stergeProdusDinCos() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
-            //   deseneazaCosul();
+              deseneazaCosul();
         }
     }
 
@@ -164,7 +164,7 @@ function actualizeazaCosul(elem,id) {
                     str += rand;
                 }
 // ****************************************************************************************************
-                document.getElementById("subtotal").innerHTML = suma;
+                // document.getElementById("subtotal").innerHTML = suma;
                 document.getElementById("tva").innerHTML = suma *0.19;;
                 
                 var tt = suma*1.19;
