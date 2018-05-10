@@ -3,6 +3,8 @@ body{
     margin: 25px;
     border: none;
     background-image: url("leaf.jpg");
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -78,6 +80,7 @@ h1{
     text-align: center;
     color:white;
     font-kerning: normal;
+    margin-top:100px;
 }
 
 ::placeholder{
@@ -88,7 +91,38 @@ h1{
 
 
 #search{
-    margin-top: 30px;
     margin-left: 10px;
 }
 
+.ham{
+    background-color: rgba(127,187,0,0);
+    color:white;
+    border: none;
+}
+
+
+#admin{
+position: fixed;
+top: 0;
+right: 0;
+
+}
+
+#ab{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+a{
+    font-family: "Open Sans";
+    font-weight: bold;
+   
+
+}
+
+.dropdown-menu{
+
+    background-color: #7FBB00;
+    text-align: justify;
+}

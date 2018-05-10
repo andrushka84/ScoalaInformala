@@ -47,17 +47,16 @@ function aduProdusul() {
 
 // Sterge un produs din cos
 
-function stergeProdusDinCos() {
+function stergeProdusDinCos(elem,id) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            
-              deseneazaCosul();
-        }
+            var listaProduse = JSON.parse(this.responseText);
+
+              deseneazaCosul();      
     }
 
-
-    var id = window.location.search.substring(4);
+    }
 
     xhttp.open("DELETE", "https://shopping-cart-magazin-online.firebaseio.com/" + id + "/.json", true);
     xhttp.send();
@@ -70,10 +69,11 @@ function actualizeazaCosul(elem,id) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-
             deseneazaCosul();
         }
     };
+
+
 
     xhttp.open("PUT", "https://shopping-cart-magazin-online.firebaseio.com/" + id + "/" + "cantitate" + ".json", true);
     xhttp.send(JSON.stringify(elem.value));
@@ -119,6 +119,7 @@ function actualizeazaCosul(elem,id) {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
+
                 var tabel = document.querySelector("#cart tbody");
                 var str = "";
                 var listaProduse = JSON.parse(this.responseText);
@@ -155,8 +156,8 @@ function actualizeazaCosul(elem,id) {
         <td data-th="Subtotal" class="text-center">${listaProduse[i].cantitate * listaProduse[i].pret}</td>
 
         <td class="actions" data-th="">
-           
-            <button class="btn btn-danger btn-sm" id="delete" onclick="stergeProdusDinCos()">
+
+        <button class="btn btn-danger btn-sm" id="delete" onclick= "stergeProdusDinCos(this,'${i}')">
                 <i class="fas fa-trash"></i>
             </button>
         </td>
@@ -212,6 +213,6 @@ function actualizeazaCosul(elem,id) {
     }
 
 
-    
+   
         
     
