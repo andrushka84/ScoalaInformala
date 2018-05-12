@@ -37,7 +37,6 @@ function drawTabel(){
     }
 
 
-// curios ca aici nu merge .json la GET, imi da null daca pun .json la capat
     xhttp.open("GET", "https://api.iextrading.com/1.0/stock/market/batch?symbols=aapl,fb&types=quote", true);
 	xhttp.send();
 
