@@ -150,7 +150,7 @@ function actualizeazaCosul(elem,id) {
         <td data-th="Price">${listaProduse[i].pret}</td>
 
         <td data-th="Quantity">
-            <input type="number" class="form-control text-center" value="${listaProduse[i].cantitate}" onchange="actualizeazaCosul(this,'${i}');" />
+            <input type="number" min="0" class="form-control text-center" value="${listaProduse[i].cantitate}" onchange="actualizeazaCosul(this,'${i}');" />
         </td>
 
         <td data-th="Subtotal" class="text-center">${listaProduse[i].cantitate * listaProduse[i].pret}</td>
