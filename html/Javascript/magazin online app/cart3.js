@@ -73,8 +73,6 @@ function actualizeazaCosul(elem,id) {
         }
     };
 
-
-
     xhttp.open("PUT", "https://shopping-cart-magazin-online.firebaseio.com/" + id + "/" + "cantitate" + ".json", true);
     xhttp.send(JSON.stringify(elem.value));
 }
@@ -131,7 +129,6 @@ function actualizeazaCosul(elem,id) {
 
                 for (var i in listaProduse) {
                     suma+= listaProduse[i].cantitate * listaProduse[i].pret;
-                    // tva+= 0.19*suma;
 
 // ******************************************************************************
 
@@ -150,7 +147,7 @@ function actualizeazaCosul(elem,id) {
         <td data-th="Price">${listaProduse[i].pret}</td>
 
         <td data-th="Quantity">
-            <input type="number" min="0" class="form-control text-center" value="${listaProduse[i].cantitate}" onchange="actualizeazaCosul(this,'${i}');" />
+            <input type="number" min="1" class="form-control text-center" value="${listaProduse[i].cantitate}" onchange="actualizeazaCosul(this,'${i}');" />
         </td>
 
         <td data-th="Subtotal" class="text-center">${listaProduse[i].cantitate * listaProduse[i].pret}</td>

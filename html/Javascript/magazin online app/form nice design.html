@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+    <title>Document</title>
+
+<style>
+
+    .input-icon-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 35%;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.input-icon {
+  background-color: purple;
+  color: white;
+  width: 30px;
+  text-align: center;
+
+}
+
+.input-with-icon {
+  border: none;
+  flex: 1;
+  
+}
+
+.input-icon, .input-with-icon {
+  padding: 1px;
+}
+
+form{
+    display: flex;
+    background-color: rgba(70, 130, 180, 0.5);
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    margin: 35px;
+    padding-top: 35px;
+    width: 70%;
+  
+}
+
+
+#save{
+    border-radius: 5px;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    border: none;
+    margin: 20px;
+    font-family: "Tangerine";
+    font-size: 20pt;
+}
+
+::placeholder{
+    font-family: "Tangerine";
+    font-size: 15px;
+}
+
+#data{
+    font-family: "Tangerine";
+}
+
+
+textarea .input-icon{
+        width: 30px;
+}
+
+body{
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+html {
+  background: url("stone.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+</style>
+
+</head>
+<body>
+        
+    <form>
+
+
+
+            <div class="input-icon-wrap">
+                    <span class="input-icon"><span class="fas fa-book"></span></span>
+                    <input type="text" class="input-with-icon" id="form-name" placeholder="Scrie titlul cartii aici">
+            </div>  
+
+
+            <div class="input-icon-wrap">
+                    <span class="input-icon"><span class="fas fa-user"></span></span>
+                    <input type="text" class="input-with-icon" id="form-name" placeholder="Scrie numele autorului aici">
+            </div>  	
+                  
+
+            <div class="input-icon-wrap">
+                    <span class="input-icon"><span class="fas fa-globe"></span></span>
+                    <input type="text" class="input-with-icon" id="form-name" placeholder="Scrie URL-ul imaginii aici">
+            </div>  	
+
+            <div class="input-icon-wrap">
+                    <span class="input-icon"><span class="fas fa-key"></span></span>
+                    <input type="text" class="input-with-icon" id="form-name" placeholder="Scrie codul produsului aici">
+            </div>  	
+
+            <div class="input-icon-wrap">
+                    <span class="input-icon"><span class="fas fa-calendar-alt"></span></span>
+                    <input type="date" class="input-with-icon" id="data" placeholder="Scrie data publicarii aici">
+            </div>  	
+                  
+
+            <div class="input-icon-wrap">
+                    <span class="input-icon"><span class="fab fa-audible"></span></span>
+                    <input type="text" class="input-with-icon" id="form-name" placeholder="Scrie categoria produsului aici">
+                    
+           
+                </div>  	
+
+            <div class="input-icon-wrap">
+                    <span class="input-icon"><span class="fas fa-info"></span></span>
+                    <textarea name="descr" id="" cols="20" rows="1" placeholder="O scurta descriere a produsului aici"></textarea>
+            </div>  
+            
+
+            <input type="button" value="Adauga produs" id="save">
+           
+
+    </form>
+    
+</body>
+</html>
+
+
+<!-- aia cu poza pe toata pagina luata de pe CSS tricks 
+        https://css-tricks.com/perfect-full-page-background-image/
+ -->

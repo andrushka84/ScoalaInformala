@@ -20,7 +20,6 @@ function drawProduseAdmin(){
 		var str="";
 					
 
-        // de vazut cum fac cu categoriile
 			for(i in listaProduse){
 
 				var rand = `
