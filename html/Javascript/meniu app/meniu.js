@@ -14,9 +14,9 @@ function drawPreparate(){
 			listaPreparate.menu[3].imagine="http://www.deliciisizambete.ro/DeliciiSiZambete/wp-content/uploads/2016/10/pulpa-de-rata-la-cuptor.jpg";
 			listaPreparate.menu[4].imagine="http://www.iretete.ro/wp-content/uploads/2013/02/cotlet-de-berbecut.jpg";
 			listaPreparate.menu[5].imagine="http://www.lactag.ro/wp-content/uploads/2016/09/0046_CARNATI-MACELARESTI-300x300.jpg";
-			listaPreparate.menu[6].imagine="http://www.casamuresana.ro/wp-content/uploads/cesar_salata-520x390.jpg";
+			// listaPreparate.menu[6].imagine="http://www.casamuresana.ro/wp-content/uploads/cesar_salata-520x390.jpg";
 			listaPreparate.menu[7].imagine="https://www.bucataras.ro/uploads/modules/news/67861/656x440_jumari-cu-ceapa-362003.jpg";
-			listaPreparate.menu[8].imagine="https://pofta-buna.com/wp-content/uploads/2015/12/Carne-prajita-in-untura-la-garnita-pofta-buna-cu-gina-bradea-6.jpg";
+			// listaPreparate.menu[8].imagine="https://pofta-buna.com/wp-content/uploads/2015/12/Carne-prajita-in-untura-la-garnita-pofta-buna-cu-gina-bradea-6.jpg";
 			listaPreparate.menu[9].imagine="http://gastropedia.ro/wp-content/uploads/2012/05/salata_icre.jpg";
 			listaPreparate.menu[10].imagine="https://www.bucataras.ro/uploads/modules/news/59046/656x440_saramura-de-peste-cu-legume-311059.jpg";
 			listaPreparate.menu["-KwPAvBToUdP7-TriCr4"].imagine="http://www.papabun.com/wp-content/poze/Clatite-cu-Nuci-si-Smantana.jpg"
